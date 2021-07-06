@@ -1,0 +1,238 @@
+.login{
+	margin : 100px auto;
+	width  : 300px;
+	padding: 40px;
+	border : 2px solid #000;
+	background: rgba(51, 51, 51, 0.5);
+	}
+
+	
+input[type=file]{
+	border: 1px solid #fff;
+	margin : auto;
+	width  : 100%;
+	padding: 5px;
+	}
+	
+input[type=submit] {
+    margin: 5px auto;
+    float: right;
+    padding: 5px;
+    width: 90px;
+    border: 1px solid #fff;
+    color: #fff;
+    background: blue;
+    cursor: pointer;
+    }
+
+a[type=submit]{
+	text-decoration: none;
+    margin: 5px auto;
+    margin-top:-1px;
+	padding: 5px;
+    width: 140px;
+    border: 1px solid black;
+    color: #fff;
+    background: blue;
+    cursor: pointer;
+	display:block;
+    }
+
+a[type=back] {
+	text-decoration:none;
+	text-align:center;
+    margin: 5px auto;
+	margin-top:2px;
+	margin-right:32px;
+    float: right;
+    padding: 5px;
+    width: 90px;
+    border: 1px solid black;
+    color: #fff;
+    background: blue;
+    cursor: pointer;
+    }
+
+.auto{
+     display:block;
+     border: 1px solid black;
+     padding: 5px;
+     margin-top: -12px;
+     width:700px;
+     height:350px;
+     overflow:auto;
+	 background : white;
+}
+
+.tengah{
+	margin : 10px auto;
+	width  : 700px;
+	padding: 0px;
+	margin-top: -13px;
+	}
+
+.latar {
+	background: url(background2.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	height:100%;
+	
+    background-size:cover;
+	}
+	
+   
+   h1{
+   color : #fff;
+   font-family : arial;
+   }
+   
+   h3{
+	   font-size: 20;
+	   font-family: times;
+	   color: black;
+   }
+   
+   h2{
+	   font-size: 20;
+	   font-family: times;
+	   color: white;
+   }
+   
+.header{
+	position: pixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	padding: 0px;
+	background: silver;
+}	
+
+header{
+	position: pixed;
+	left:0;
+	top:0;
+	width: 100%;
+	font-size: 30px;
+	text-align: center;
+	color: black;
+	background: silver;
+	padding: 0px;
+}
+
+
+header .judul{
+	padding-top:10px;
+	text-align: Center;
+	font-size: 40;
+	font-family: Harrington;
+}
+
+header .deskripsi{
+	padding-bottom: 10px;
+	text-align: center;
+	font-size: 24;
+	font-family: Brush Script MT;
+	color:black;
+}
+
+
+	
+#footer{
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		text-align: center;
+		padding: 3px;
+		background-color: lavender;
+		text-align: center;
+		color: black;
+}
+	
+	.wrapper{
+	width : 100%;
+	margin : auto;
+	position : relative;
+	}
+	
+	.preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 9999;
+      background-color: #fff;
+    }
+.preloader .loading {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+      font: 14px arial;
+    }
+.menu-wrap {
+	border :none;
+	background-color:rgba(51, 51, 51, 0.5); 
+	height:70px; 
+	line-height:40px;
+	position:relative;
+	width:500px;
+	margin:0px;
+	margin-top:-70px;
+	float : right;
+}
+
+#menu{
+	background-color: white;
+	border: 1px black;
+}
+#menu ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+#menu ul li.utama{
+	display: inline-table;
+}
+#menu ul li :hover{
+	background-color: silver;
+}
+#menu ul li a{
+	display: block;
+	text-decoration: none;
+	line-height: 40px;
+	padding: 0 10px;
+	color: black;
+}
+
+.utama ul{
+	display: none;
+	position: absolute;
+	z-index: 2;
+}
+ 
+.utama:hover ul{
+	display: block;
+}
+.utama ul li{
+	display: block;
+	background-color: white;
+	width: 250px;
+}
+
+.tentang{
+     padding:20px;
+	 display:block;
+     border: 2px solid black;
+     margin-top:30px;
+	 margin-left:30;
+     width:600px;
+     height:380px;
+     overflow:auto;
+	 background : silver;
+	}
+
+.kuy{
+	margin-left:80px;
+}
