@@ -1,11 +1,17 @@
 <?php
-/* ------------------------------------------------
-   form untuk contoh melakukan pencarian
-   berkas ini diberi nama: form-cari.php 
-   dibuat pada tanggal:
-   - 6 juli 2021
-
-   ------------------------------------------------ */
-
-
+/* -------------------------------------------------
+   form untuk pemasukan kata pencarian
+   ------------------------------------------------- */
 ?>
+
+<table border=1>
+<tr>
+<td>
+<form method=POST action="tampilkan-hasil-cari.php">
+Kata pencarian :
+<input type=text name=potongan><br>
+<input type=submit value='Cari'>
+</form>
+</td></tr>
+
+</table>
