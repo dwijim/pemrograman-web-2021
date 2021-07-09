@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 08, 2021 at 03:00 AM
+-- Generation Time: Jul 09, 2021 at 12:40 AM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 8.0.6
 
@@ -832,9 +832,9 @@ INSERT INTO `manusia` (`Nomor_Data`, `Nama_Lengkap`, `Jenis_Kelamin`, `Tempat_La
 (7, 'Dwi Sakethi', 'L', 'Pandeglang', '1976-05-26', 'Padang Pendek', '05', '08', '08', 14, '2', 2, 6, 108, 4, '0878787878787', '-', 80, 'Titi', 'Nuri', NULL, 'Rhoma', NULL, 'Super Dede', NULL, '-', NULL, '-', NULL, '-', NULL, '-', NULL, '-', '-', '-'),
 (8, 'Nusron', 'L', 'Jakarta', '1971-07-01', 'Taman Keputren', '05', '08', '11', 44, '2', 13, 6, 8, 4, '0819110078678', 'ih@gmail.com', 101, 'Retno', 'Prinsis', NULL, 'Princ', NULL, '-', NULL, '-', NULL, '-', NULL, '-', NULL, '-', NULL, '-', '-', '-'),
 (9, 'Soolai', 'P', 'Sorong', '1982-12-20', 'Krakatau', '01', '02', '02', 10, '2', 1, 6, 28, NULL, '0817038439455', NULL, 62, 'Siti Sutiti', 'Siren', NULL, 'Ismail', NULL, '-', NULL, '-', NULL, '-', NULL, '-', NULL, '-', NULL, '-', '-', '-'),
-(13, 'Ijul Aja', 'P', 'Jabung', '0000-00-00', '-', '-', '-', '-', 0, NULL, 0, 0, 0, 0, '-', '-', 0, '-', '-', NULL, '-', NULL, '-', NULL, '-', NULL, '-', NULL, '-', NULL, '-', NULL, '-', '-', '-'),
-(14, 'Amrina Rosada', 'P', '-', '0000-00-00', '-', '-', '-', '-', 0, NULL, 0, 0, 0, 0, '-', '-', 0, '-', '-', NULL, '-', NULL, '-', NULL, '-', NULL, '-', NULL, '-', NULL, '-', NULL, '-', '-', '-'),
-(15, 'Dial Saks Robin', 'L', '-', '0000-00-00', '-', '-', '-', '-', 0, NULL, 0, 0, 0, 0, '-', '-', 0, '-', '-', NULL, '-', NULL, '-', NULL, '-', NULL, '-', NULL, '-', NULL, '-', NULL, '-', '-', '-');
+(13, 'Ijul Aja', 'P', 'Jabung', '0000-00-00', '-', '-', '-', '11', 0, NULL, 0, 0, 0, 0, '-', '-', 0, '-', '-', NULL, '-', NULL, '-', NULL, '-', NULL, '-', NULL, '-', NULL, '-', NULL, '-', '-', '-'),
+(14, 'Amrina Rosada', 'P', '-', '0000-00-00', '-', '-', '-', '11', 0, NULL, 0, 0, 0, 0, '-', '-', 0, '-', '-', NULL, '-', NULL, '-', NULL, '-', NULL, '-', NULL, '-', NULL, '-', NULL, '-', '-', '-'),
+(15, 'Dial Saks Robin', 'L', '-', '0000-00-00', '-', '-', '-', '01', 0, NULL, 0, 0, 0, 0, '-', '-', 0, '-', '-', NULL, '-', NULL, '-', NULL, '-', NULL, '-', NULL, '-', NULL, '-', NULL, '-', '-', '-');
 
 -- --------------------------------------------------------
 
@@ -843,7 +843,7 @@ INSERT INTO `manusia` (`Nomor_Data`, `Nama_Lengkap`, `Jenis_Kelamin`, `Tempat_La
 --
 
 CREATE TABLE `pemakai` (
-  `username` char(11) DEFAULT NULL,
+  `username` char(11) NOT NULL,
   `password` char(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -852,7 +852,8 @@ CREATE TABLE `pemakai` (
 --
 
 INSERT INTO `pemakai` (`username`, `password`) VALUES
-('dwijim', 'dwisakethi');
+('dwijim', 'dwisakethi'),
+('pingpong', '123');
 
 -- --------------------------------------------------------
 
@@ -947,6 +948,12 @@ ALTER TABLE `kode_tingkat_pendidikan`
 --
 ALTER TABLE `manusia`
   ADD PRIMARY KEY (`Nomor_Data`);
+
+--
+-- Indexes for table `pemakai`
+--
+ALTER TABLE `pemakai`
+  ADD PRIMARY KEY (`username`);
 
 --
 -- Indexes for table `rekap`
