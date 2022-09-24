@@ -1,13 +1,15 @@
 <?php
-	include "koneksi.php";
+
+include "koneksi.php";
 	$kosongin_dulu=mysqli_query($conn,"TRUNCATE TABLE jumlahkata");
 	$kosongin_upload=mysqli_query($conn,"truncate table upload");
+
 ?>
 <html>
 <head>
-	<title>Pilih Dokumen</title>
+	<title>Koreksi Kata (Sikat)</title>
 	<link rel="stylesheet" href="style.css">
-	<script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
+	<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
 	<script>
 			$(document).ready(function(){$(".preloader").delay(30).fadeOut("slow");});
 			function preventBack(){window.history.forward();} setTimeout("preventBack()", 0); window.onunload=function(){null};
@@ -49,4 +51,7 @@ Copyright@ 2020  Andika Saputra (Jerambai)
 </div>
 	</div>
 </body>
+
+<a href="https://info.flagcounter.com/Yx5b"><img src="https://s11.flagcounter.com/count2/Yx5b/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
+
 </html>
