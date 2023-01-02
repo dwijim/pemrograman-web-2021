@@ -356,17 +356,20 @@ $(document).ready(function() {
 </script>
 
 </div>
+<div>
 <table>
 <tr>
-	<td align="center"><a href="baqo.php?data=upload" type="submit">Selesai</a></td>
-	<td align="center"><a href="baqo.php?data=download" type="submit">Unduh Kesalahan</a></td>
-	<td align="center"><a href="baqo.php?data=lihat" type="submit">Lihat Persantase</a></td>
-	<td align="center"><a href="karakter.php" type="submit">Cek Karakter</a></td>
+	<td align="center" width=30><a href="baqo.php?data=upload" type="submit">Selesai</a></td>
+	<td align="center" width=30><a href="baqo.php?data=download" type="submit" target=new>Hasil #1</a></td>
+	<td align="center" width=30><a href="unduh.php" type="submit" target=new>Hasil #2</a></td>
+	<td align="center" width=30><a href="baqo.php?data=lihat" type="submit" target=new>Persentase</a></td>
+	<td align="center" width=30><a href="karakter.php" type="submit" target=new>Cek Karakter</a></td>
 </tr>
 </table>
 </div>
+</div>
 <div id="footer">
-Copyright@ 2020  Andika Saputra(Jerambai)
+Copyright@ 2020  Andika Saputra(Jerambai) - Dwi Sakethi (2022)
 </div>
 </div>
 </body>
