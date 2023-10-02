@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Sep 29, 2023 at 07:11 PM
--- Server version: 5.7.41
--- PHP Version: 8.1.16
+-- Waktu pembuatan: 03 Okt 2023 pada 05.56
+-- Versi server: 5.7.41
+-- Versi PHP: 8.1.16
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `jumlahkata`
+-- Struktur dari tabel `jumlahkata`
 --
 
 CREATE TABLE `jumlahkata` (
@@ -34,11 +34,11 @@ CREATE TABLE `jumlahkata` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `jumlahkata`
+-- Dumping data untuk tabel `jumlahkata`
 --
 
 INSERT INTO `jumlahkata` (`nama_kata`, `jumlah`, `keterangan`) VALUES
-('', 8547, 'Benar'),
+('', 7900, 'Benar'),
 ('sistem', 147, 'Benar'),
 ('penjualan', 50, 'Benar'),
 ('berbasis', 31, 'Benar'),
@@ -56,7 +56,7 @@ INSERT INTO `jumlahkata` (`nama_kata`, `jumlah`, `keterangan`) VALUES
 ('npm', 3, 'Benar'),
 ('fakultas', 5, 'Benar'),
 ('matematika', 5, 'Benar'),
-('dan', 335, 'Benar'),
+('dan', 340, 'Benar'),
 ('ilmu', 12, 'Benar'),
 ('pengetahuan', 6, 'Benar'),
 ('alam', 5, 'Benar'),
@@ -74,7 +74,7 @@ INSERT INTO `jumlahkata` (`nama_kata`, `jumlah`, `keterangan`) VALUES
 ('madya', 2, 'Benar'),
 ('manajemen', 20, 'Benar'),
 ('informatika', 9, 'Benar'),
-('pada', 122, 'Benar'),
+('pada', 126, 'Benar'),
 ('jurusan', 6, 'Benar'),
 ('komputer', 11, 'Benar'),
 ('judul', 2, 'Benar'),
@@ -107,7 +107,7 @@ INSERT INTO `jumlahkata` (`nama_kata`, `jumlah`, `keterangan`) VALUES
 ('ketua', 3, 'Benar'),
 ('komputerketua', 1, 'Salah Tulis'),
 ('diii', 2, 'Benar'),
-('t', 8, 'Salah Tulis'),
+('t', 7, 'Salah Tulis'),
 ('ossy', 2, 'Benar'),
 ('dwi', 3, 'Benar'),
 ('endah', 2, 'Benar'),
@@ -137,7 +137,7 @@ INSERT INTO `jumlahkata` (`nama_kata`, `jumlah`, `keterangan`) VALUES
 ('menyatakan', 2, 'Benar'),
 ('bahwa', 15, 'Benar'),
 ('sesungguhnya', 2, 'Benar'),
-('yang', 276, 'Benar'),
+('yang', 271, 'Benar'),
 ('berjudul', 1, 'Benar'),
 ('adalah', 38, 'Benar'),
 ('karya', 5, 'Benar'),
@@ -145,7 +145,7 @@ INSERT INTO `jumlahkata` (`nama_kata`, `jumlah`, `keterangan`) VALUES
 ('arahan', 1, 'Benar'),
 ('belum', 4, 'Benar'),
 ('diajukan', 3, 'Benar'),
-('dalam', 66, 'Benar'),
+('dalam', 67, 'Benar'),
 ('bentuk', 2, 'Benar'),
 ('apapun', 2, 'Benar'),
 ('kepada', 14, 'Benar'),
@@ -155,18 +155,17 @@ INSERT INTO `jumlahkata` (`nama_kata`, `jumlah`, `keterangan`) VALUES
 ('berasal', 1, 'Benar'),
 ('atau', 55, 'Benar'),
 ('dikutip', 1, 'Benar'),
-('dari', 54, 'Benar'),
+('dari', 55, 'Benar'),
 ('diterbitkan', 2, 'Benar'),
 ('maupun', 2, 'Benar'),
 ('tidak', 17, 'Benar'),
 ('lain', 6, 'Benar'),
 ('telah', 25, 'Benar'),
-('disebutkan', 2, 'Benar'),
+('disebutkan', 3, 'Benar'),
 ('teks', 3, 'Benar'),
-('dicantum', 1, 'Salah Tulis'),
 ('daftar', 23, 'Benar'),
 ('pustaka', 5, 'Benar'),
-('di', 41, 'Benar'),
+('di', 42, 'Benar'),
 ('bagian', 8, 'Benar'),
 ('hak', 2, 'Benar'),
 ('cipta', 2, 'Benar'),
@@ -215,7 +214,7 @@ INSERT INTO `jumlahkata` (`nama_kata`, `jumlah`, `keterangan`) VALUES
 ('bapak', 4, 'Benar'),
 ('dedi', 1, 'Benar'),
 ('suryadi', 1, 'Benar'),
-('h', 113, 'Salah Tulis'),
+('h', 116, 'Salah Tulis'),
 ('ibu', 1, 'Benar'),
 ('yayu', 1, 'Benar'),
 ('herniyati', 1, 'Benar'),
@@ -251,7 +250,7 @@ INSERT INTO `jumlahkata` (`nama_kata`, `jumlah`, `keterangan`) VALUES
 ('eksternal', 3, 'Benar'),
 ('himpunan', 2, 'Benar'),
 ('himakom', 1, 'Benar'),
-('motto', 1, 'Benar'),
+('moto', 1, 'Benar'),
 ('ada', 12, 'Benar'),
 ('pemberian', 1, 'Benar'),
 ('orang', 2, 'Benar'),
@@ -259,7 +258,6 @@ INSERT INTO `jumlahkata` (`nama_kata`, `jumlah`, `keterangan`) VALUES
 ('paling', 3, 'Benar'),
 ('berharga', 1, 'Benar'),
 ('anaknya', 1, 'Benar'),
-('daripada', 1, 'Salah Tulis'),
 ('akhlak', 1, 'Benar'),
 ('mulia', 1, 'Benar'),
 ('hr', 1, 'Salah Tulis'),
@@ -273,60 +271,6 @@ INSERT INTO `jumlahkata` (`nama_kata`, `jumlah`, `keterangan`) VALUES
 ('perbuatannya', 1, 'Benar'),
 ('qs', 1, 'Salah Tulis'),
 ('alaq', 1, 'Benar'),
-('cause', 1, 'Benar'),
-('there', 1, 'Benar'),
-('were', 1, 'Benar'),
-('pages', 1, 'Benar'),
-('turned', 1, 'Benar'),
-('with', 1, 'Benar'),
-('the', 2, 'Benar'),
-('bridges', 1, 'Benar'),
-('burned', 1, 'Benar'),
-('everything', 1, 'Benar'),
-('you', 4, 'Benar'),
-('lose', 1, 'Benar'),
-('is', 5, 'Benar'),
-('a', 9, 'Salah Tulis'),
-('step', 1, 'Benar'),
-('take', 1, 'Benar'),
-('taylor', 2, 'Benar'),
-('swift', 2, 'Benar'),
-('life', 2, 'Benar'),
-('can', 2, 'Benar'),
-('be', 1, 'Benar'),
-('heavy', 1, 'Benar'),
-('especially', 1, 'Benar'),
-('if', 9, 'Benar'),
-('try', 1, 'Benar'),
-('to', 10, 'Benar'),
-('carry', 2, 'Benar'),
-('it', 4, 'Salah Tulis'),
-('all', 3, 'Benar'),
-('at', 1, 'Benar'),
-('once', 1, 'Benar'),
-('part', 1, 'Benar'),
-('of', 3, 'Benar'),
-('growing', 1, 'Benar'),
-('up', 15, 'Benar'),
-('and', 3, 'Benar'),
-('moving', 1, 'Benar'),
-('into', 1, 'Benar'),
-('new', 1, 'Benar'),
-('chapters', 1, 'Benar'),
-('your', 1, 'Benar'),
-('about', 1, 'Benar'),
-('catch', 1, 'Benar'),
-('relase', 1, 'Salah Tulis'),
-('what', 3, 'Benar'),
-('i', 6, 'Salah Tulis'),
-('mean', 1, 'Benar'),
-('by', 1, 'Benar'),
-('that', 1, 'Benar'),
-('knowing', 1, 'Benar'),
-('things', 2, 'Benar'),
-('keep', 1, 'Benar'),
-('this', 1, 'Benar'),
-('release', 1, 'Benar'),
 ('persembahan', 1, 'Benar'),
 ('rasa', 2, 'Benar'),
 ('syukur', 2, 'Benar'),
@@ -344,7 +288,7 @@ INSERT INTO `jumlahkata` (`nama_kata`, `jumlah`, `keterangan`) VALUES
 ('doa', 2, 'Benar'),
 ('serta', 13, 'Benar'),
 ('dukungan', 5, 'Benar'),
-('sangat', 16, 'Benar'),
+('sangat', 15, 'Benar'),
 ('tulus', 1, 'Benar'),
 ('keluarga', 2, 'Benar'),
 ('besar', 4, 'Benar'),
@@ -364,13 +308,12 @@ INSERT INTO `jumlahkata` (`nama_kata`, `jumlah`, `keterangan`) VALUES
 ('rahmat', 2, 'Benar'),
 ('hidayah', 1, 'Benar'),
 ('karunia', 2, 'Benar'),
-('nya', 4, 'Salah Tulis'),
+('nya', 3, 'Salah Tulis'),
 ('sehingga', 15, 'Benar'),
 ('dapat', 145, 'Benar'),
 ('shalawat', 1, 'Benar'),
 ('salam', 1, 'Benar'),
 ('lupa', 1, 'Benar'),
-('kita', 2, 'Benar'),
 ('sanjungkan', 1, 'Benar'),
 ('baginda', 1, 'Benar'),
 ('rasulullah', 1, 'Benar'),
@@ -396,12 +339,12 @@ INSERT INTO `jumlahkata` (`nama_kata`, `jumlah`, `keterangan`) VALUES
 ('memperoleh', 1, 'Benar'),
 ('berbagai', 19, 'Benar'),
 ('pihak', 4, 'Benar'),
-('karena', 5, 'Benar'),
+('karena', 6, 'Benar'),
 ('itu', 14, 'Benar'),
 ('kesempatan', 1, 'Benar'),
 ('diucapkan', 1, 'Benar'),
-('terima', 1, 'Benar'),
-('kasih', 1, 'Benar'),
+('terima', 2, 'Benar'),
+('kasih', 2, 'Benar'),
 ('sebesar', 1, 'Benar'),
 ('besarnya', 1, 'Benar'),
 ('terselesaikan', 2, 'Benar'),
@@ -450,15 +393,12 @@ INSERT INTO `jumlahkata` (`nama_kata`, `jumlah`, `keterangan`) VALUES
 ('alji', 1, 'Salah Tulis'),
 ('ipal', 1, 'Salah Tulis'),
 ('irvan', 1, 'Benar'),
-('terimakasih', 1, 'Salah Tulis'),
-('karna', 1, 'Salah Tulis'),
 ('siap', 1, 'Benar'),
 ('siaga', 1, 'Benar'),
 ('emergency', 1, 'Benar'),
 ('call', 1, 'Benar'),
 ('berbagi', 1, 'Benar'),
 ('cerita', 1, 'Benar'),
-('disetiap', 1, 'Salah Tulis'),
 ('langkah', 6, 'Benar'),
 ('suka', 1, 'Benar'),
 ('duka', 1, 'Benar'),
@@ -490,7 +430,6 @@ INSERT INTO `jumlahkata` (`nama_kata`, `jumlah`, `keterangan`) VALUES
 ('kemampuan', 1, 'Benar'),
 ('pengalaman', 4, 'Benar'),
 ('membangun', 7, 'Benar'),
-('diharapkan', 11, 'Benar'),
 ('bahan', 2, 'Benar'),
 ('refleksi', 1, 'Benar'),
 ('diri', 2, 'Benar'),
@@ -501,15 +440,16 @@ INSERT INTO `jumlahkata` (`nama_kata`, `jumlah`, `keterangan`) VALUES
 ('bermanfaat', 1, 'Benar'),
 ('isi', 3, 'Benar'),
 ('halaman', 189, 'Benar'),
-('toc', 111, 'Benar'),
+('toc', 114, 'Benar'),
 ('o', 1, 'Salah Tulis'),
 ('z', 3, 'Salah Tulis'),
 ('u', 1, 'Benar'),
-('pageref', 108, 'Benar'),
+('pageref', 111, 'Benar'),
 ('iii', 2, 'Benar'),
-('tabel', 156, 'Benar'),
+('tabel', 159, 'Benar'),
 ('v', 4, 'Salah Tulis'),
 ('gambar', 217, 'Benar'),
+('i', 5, 'Salah Tulis'),
 ('pendahuluan', 2, 'Benar'),
 ('latar', 2, 'Benar'),
 ('belakang', 3, 'Benar'),
@@ -541,7 +481,7 @@ INSERT INTO `jumlahkata` (`nama_kata`, `jumlah`, `keterangan`) VALUES
 ('pembahasan', 4, 'Benar'),
 ('plugin', 71, 'Benar'),
 ('tampilan', 66, 'Benar'),
-('pengujian', 23, 'Benar'),
+('pengujian', 31, 'Benar'),
 ('simpulan', 4, 'Benar'),
 ('c', 2, 'Salah Tulis'),
 ('pertanyaan', 22, 'Benar'),
@@ -555,7 +495,7 @@ INSERT INTO `jumlahkata` (`nama_kata`, `jumlah`, `keterangan`) VALUES
 ('detail', 76, 'Benar'),
 ('kategori', 36, 'Benar'),
 ('kupon', 8, 'Benar'),
-('costumers', 1, 'Benar'),
+('customers', 103, 'Benar'),
 ('order', 31, 'Benar'),
 ('product', 15, 'Benar'),
 ('status', 16, 'Benar'),
@@ -573,11 +513,11 @@ INSERT INTO `jumlahkata` (`nama_kata`, `jumlah`, `keterangan`) VALUES
 ('zones', 5, 'Benar'),
 ('tokens', 3, 'Benar'),
 ('locations', 2, 'Benar'),
-('black', 15, 'Benar'),
-('box', 15, 'Benar'),
-('role', 12, 'Benar'),
-('customers', 100, 'Benar'),
-('admin', 49, 'Benar'),
+('black', 19, 'Benar'),
+('box', 19, 'Benar'),
+('role', 15, 'Benar'),
+('lanjutan', 7, 'Benar'),
+('admin', 50, 'Benar'),
 ('kuesioner', 6, 'Benar'),
 ('uat', 6, 'Benar'),
 ('pressman', 4, 'Benar'),
@@ -587,13 +527,14 @@ INSERT INTO `jumlahkata` (`nama_kata`, `jumlah`, `keterangan`) VALUES
 ('activity', 47, 'Benar'),
 ('login', 31, 'Benar'),
 ('sign', 14, 'Benar'),
+('up', 14, 'Benar'),
 ('kontak', 24, 'Benar'),
 ('memesan', 8, 'Benar'),
 ('mengelola', 53, 'Benar'),
 ('akun', 54, 'Benar'),
-('wishlist', 30, 'Benar'),
+('wishlist', 31, 'Benar'),
 ('pesanan', 92, 'Benar'),
-('beranda', 15, 'Benar'),
+('beranda', 16, 'Benar'),
 ('keranjang', 36, 'Benar'),
 ('checkout', 31, 'Benar'),
 ('diterima', 4, 'Benar'),
@@ -602,6 +543,7 @@ INSERT INTO `jumlahkata` (`nama_kata`, `jumlah`, `keterangan`) VALUES
 ('pengaturan', 9, 'Benar'),
 ('elementor', 8, 'Benar'),
 ('editing', 3, 'Benar'),
+('if', 8, 'Benar'),
 ('menu', 69, 'Benar'),
 ('implementasi', 7, 'Benar'),
 ('ongkoskirim', 6, 'Salah Tulis'),
@@ -671,7 +613,6 @@ INSERT INTO `jumlahkata` (`nama_kata`, `jumlah`, `keterangan`) VALUES
 ('tetapi', 1, 'Benar'),
 ('harus', 16, 'Benar'),
 ('dikelola', 1, 'Benar'),
-('govern', 1, 'Salah Tulis'),
 ('secara', 14, 'Benar'),
 ('profesional', 1, 'Benar'),
 ('jogiyanto', 2, 'Benar'),
@@ -714,7 +655,7 @@ INSERT INTO `jumlahkata` (`nama_kata`, `jumlah`, `keterangan`) VALUES
 ('pemasaran', 2, 'Benar'),
 ('lebih', 12, 'Benar'),
 ('efisien', 4, 'Benar'),
-('mana', 4, 'Benar'),
+('mana', 6, 'Benar'),
 ('ecommerce', 1, 'Benar'),
 ('memperlihatkan', 1, 'Benar'),
 ('adanya', 5, 'Benar'),
@@ -872,7 +813,6 @@ INSERT INTO `jumlahkata` (`nama_kata`, `jumlah`, `keterangan`) VALUES
 ('pengguna', 57, 'Benar'),
 ('connolly', 1, 'Benar'),
 ('hoarau', 1, 'Benar'),
-('amp', 13, 'Benar'),
 ('bannister', 1, 'Benar'),
 ('upaya', 2, 'Benar'),
 ('maintaining', 1, 'Benar'),
@@ -985,6 +925,7 @@ INSERT INTO `jumlahkata` (`nama_kata`, `jumlah`, `keterangan`) VALUES
 ('kuat', 4, 'Benar'),
 ('praktik', 1, 'Benar'),
 ('pengamanan', 1, 'Benar'),
+('it', 3, 'Salah Tulis'),
 ('infrastruktur', 2, 'Benar'),
 ('aman', 2, 'Benar'),
 ('pemantauan', 1, 'Benar'),
@@ -993,6 +934,7 @@ INSERT INTO `jumlahkata` (`nama_kata`, `jumlah`, `keterangan`) VALUES
 ('ddos', 1, 'Benar'),
 ('distributed', 1, 'Benar'),
 ('denial', 1, 'Benar'),
+('of', 1, 'Benar'),
 ('verifikasi', 3, 'Benar'),
 ('otentikasi', 2, 'Benar'),
 ('sandi', 12, 'Benar'),
@@ -1153,7 +1095,7 @@ INSERT INTO `jumlahkata` (`nama_kata`, `jumlah`, `keterangan`) VALUES
 ('berbelanja', 3, 'Benar'),
 ('modern', 1, 'Benar'),
 ('fokus', 1, 'Benar'),
-('kustomisasi', 1, 'Salah Tulis'),
+('personalisasi', 1, 'Salah Tulis'),
 ('performa', 1, 'Benar'),
 ('arsitektur', 2, 'Benar'),
 ('microservices', 2, 'Benar'),
@@ -1225,12 +1167,13 @@ INSERT INTO `jumlahkata` (`nama_kata`, `jumlah`, `keterangan`) VALUES
 ('pendukung', 2, 'Benar'),
 ('seq', 77, 'Benar'),
 ('arabic', 77, 'Benar'),
-('menunjukan', 1, 'Benar'),
+('menunjukkan', 2, 'Benar'),
 ('beroperasinya', 1, 'Benar'),
 ('apakah', 13, 'Benar'),
 ('pemasukan', 1, 'Benar'),
 ('keluaran', 1, 'Benar'),
 ('sebagaimana', 1, 'Benar'),
+('diinginkan', 6, 'Benar'),
 ('disimpan', 9, 'Benar'),
 ('dijaga', 1, 'Benar'),
 ('kemutakhiran', 1, 'Benar'),
@@ -1249,7 +1192,6 @@ INSERT INTO `jumlahkata` (`nama_kata`, `jumlah`, `keterangan`) VALUES
 ('dikatakan', 1, 'Benar'),
 ('layak', 2, 'Benar'),
 ('end', 1, 'Benar'),
-('dimana', 2, 'Benar'),
 ('staf', 1, 'Benar'),
 ('fungsinya', 1, 'Benar'),
 ('setelah', 18, 'Benar'),
@@ -1269,20 +1211,19 @@ INSERT INTO `jumlahkata` (`nama_kata`, `jumlah`, `keterangan`) VALUES
 ('nurdin', 1, 'Benar'),
 ('merasa', 2, 'Benar'),
 ('terbantu', 2, 'Benar'),
-('pahami', 2, 'Benar'),
+('dipahami', 2, 'Benar'),
 ('didapatkan', 2, 'Benar'),
 ('arti', 1, 'Benar'),
 ('kurang', 2, 'Benar'),
 ('dihitung', 1, 'Benar'),
 ('persentasenya', 1, 'Benar'),
 ('rumus', 1, 'Benar'),
-('persentase', 6, 'Benar'),
+('persentase', 7, 'Benar'),
 ('sskor', 1, 'Salah Tulis'),
 ('ideal', 2, 'Benar'),
 ('x', 6, 'Benar'),
 ('keterangan', 18, 'Benar'),
 ('nilai', 8, 'Benar'),
-('presentase', 1, 'Salah Tulis'),
 ('dicari', 1, 'Benar'),
 ('jumlah', 9, 'Benar'),
 ('frekuensi', 1, 'Benar'),
@@ -1301,7 +1242,6 @@ INSERT INTO `jumlahkata` (`nama_kata`, `jumlah`, `keterangan`) VALUES
 ('fungsional', 6, 'Benar'),
 ('non', 1, 'Benar'),
 ('apa', 2, 'Benar'),
-('menunjukkan', 1, 'Benar'),
 ('registrasi', 3, 'Benar'),
 ('menghapus', 10, 'Benar'),
 ('disajikan', 1, 'Benar'),
@@ -1333,8 +1273,8 @@ INSERT INTO `jumlahkata` (`nama_kata`, `jumlah`, `keterangan`) VALUES
 ('mengakses', 27, 'Benar'),
 ('jika', 17, 'Benar'),
 ('meng', 7, 'Benar'),
-('input', 10, 'Benar'),
-('kan', 8, 'Benar'),
+('input', 11, 'Benar'),
+('kan', 9, 'Benar'),
 ('email', 21, 'Benar'),
 ('password', 15, 'Benar'),
 ('klik', 57, 'Benar'),
@@ -1345,7 +1285,6 @@ INSERT INTO `jumlahkata` (`nama_kata`, `jumlah`, `keterangan`) VALUES
 ('peringatan', 2, 'Benar'),
 ('ketidak', 1, 'Benar'),
 ('cocokan', 1, 'Benar'),
-('diinputkan', 1, 'Benar'),
 ('pendaftaran', 1, 'Benar'),
 ('mengirim', 5, 'Benar'),
 ('pesan', 12, 'Benar'),
@@ -1398,11 +1337,10 @@ INSERT INTO `jumlahkata` (`nama_kata`, `jumlah`, `keterangan`) VALUES
 ('display', 1, 'Benar'),
 ('name', 5, 'Benar'),
 ('wc', 8, 'Salah Tulis'),
-('category', 3, 'Benar'),
+('category', 4, 'Benar'),
 ('lookup', 6, 'Salah Tulis'),
 ('tree', 1, 'Benar'),
 ('bigint', 38, 'Benar'),
-('categoy', 1, 'Salah Tulis'),
 ('coupon', 3, 'Benar'),
 ('date', 9, 'Benar'),
 ('created', 5, 'Benar'),
@@ -1418,7 +1356,8 @@ INSERT INTO `jumlahkata` (`nama_kata`, `jumlah`, `keterangan`) VALUES
 ('timestamp', 3, 'Benar'),
 ('country', 1, 'Benar'),
 ('char', 2, 'Benar'),
-('postcode', 1, 'Salah Tulis'),
+('post', 1, 'Benar'),
+('code', 2, 'Benar'),
 ('city', 1, 'Benar'),
 ('state', 1, 'Benar'),
 ('posting', 1, 'Benar'),
@@ -1449,6 +1388,7 @@ INSERT INTO `jumlahkata` (`nama_kata`, `jumlah`, `keterangan`) VALUES
 ('or', 1, 'Benar'),
 ('taxonomy', 1, 'Benar'),
 ('term', 1, 'Benar'),
+('is', 2, 'Benar'),
 ('attribute', 1, 'Benar'),
 ('in', 4, 'Benar'),
 ('stock', 11, 'Benar'),
@@ -1459,7 +1399,8 @@ INSERT INTO `jumlahkata` (`nama_kata`, `jumlah`, `keterangan`) VALUES
 ('price', 2, 'Benar'),
 ('decimal', 3, 'Benar'),
 ('max', 1, 'Benar'),
-('onsale', 1, 'Salah Tulis'),
+('on', 1, 'Benar'),
+('sale', 1, 'Benar'),
 ('quantity', 2, 'Benar'),
 ('rating', 2, 'Benar'),
 ('count', 1, 'Benar'),
@@ -1478,16 +1419,14 @@ INSERT INTO `jumlahkata` (`nama_kata`, `jumlah`, `keterangan`) VALUES
 ('sesi', 1, 'Benar'),
 ('interaksi', 2, 'Benar'),
 ('session', 4, 'Benar'),
-('expiry', 1, 'Salah Tulis'),
+('expire', 1, 'Salah Tulis'),
 ('zona', 3, 'Benar'),
 ('zone', 5, 'Benar'),
 ('kartu', 3, 'Benar'),
 ('kredit', 3, 'Benar'),
 ('gateaway', 1, 'Benar'),
 ('default', 1, 'Benar'),
-('location', 3, 'Benar'),
-('locatio', 1, 'Salah Tulis'),
-('code', 1, 'Benar'),
+('location', 4, 'Benar'),
 ('perencanaan', 2, 'Benar'),
 ('nantinya', 1, 'Benar'),
 ('acuan', 2, 'Benar'),
@@ -1508,6 +1447,7 @@ INSERT INTO `jumlahkata` (`nama_kata`, `jumlah`, `keterangan`) VALUES
 ('rincian', 6, 'Benar'),
 ('lanjut', 3, 'Benar'),
 ('add', 7, 'Benar'),
+('to', 7, 'Benar'),
 ('kecamatan', 2, 'Benar'),
 ('provinsi', 2, 'Benar'),
 ('pos', 2, 'Benar'),
@@ -1536,7 +1476,6 @@ INSERT INTO `jumlahkata` (`nama_kata`, `jumlah`, `keterangan`) VALUES
 ('umum', 2, 'Benar'),
 ('statistik', 1, 'Benar'),
 ('menolak', 1, 'Benar'),
-('lanjutan', 4, 'Benar'),
 ('pembangunan', 1, 'Benar'),
 ('tombol', 4, 'Benar'),
 ('formulir', 4, 'Benar'),
@@ -1553,7 +1492,6 @@ INSERT INTO `jumlahkata` (`nama_kata`, `jumlah`, `keterangan`) VALUES
 ('penyedia', 1, 'Benar'),
 ('tarif', 1, 'Benar'),
 ('otomatis', 1, 'Benar'),
-('diinginkan', 2, 'Benar'),
 ('sepenuhnya', 1, 'Benar'),
 ('disinkronkan', 1, 'Benar'),
 ('memindahkan', 1, 'Benar'),
@@ -1570,18 +1508,17 @@ INSERT INTO `jumlahkata` (`nama_kata`, `jumlah`, `keterangan`) VALUES
 ('apabila', 2, 'Benar'),
 ('cocok', 1, 'Benar'),
 ('pernah', 1, 'Benar'),
-('dasbor', 1, 'Salah Tulis'),
 ('opsi', 1, 'Benar'),
 ('silang', 1, 'Benar'),
 ('terapkan', 1, 'Benar'),
 ('melanjutkan', 1, 'Benar'),
 ('lanjutkan', 2, 'Benar'),
 ('diminta', 1, 'Benar'),
-('wishlis', 1, 'Salah Tulis'),
 ('cart', 3, 'Salah Tulis'),
 ('apply', 1, 'Benar'),
 ('menerapkan', 1, 'Benar'),
 ('selected', 1, 'Benar'),
+('all', 1, 'Benar'),
 ('merubahnya', 1, 'Benar'),
 ('from', 1, 'Benar'),
 ('disertai', 1, 'Benar'),
@@ -1625,7 +1562,9 @@ INSERT INTO `jumlahkata` (`nama_kata`, `jumlah`, `keterangan`) VALUES
 ('kelancaran', 1, 'Benar'),
 ('bibliography', 1, 'Benar'),
 ('chamida', 1, 'Benar'),
+('a', 8, 'Salah Tulis'),
 ('susanto', 1, 'Benar'),
+('amp', 8, 'Benar'),
 ('latubessy', 1, 'Benar'),
 ('analisa', 2, 'Benar'),
 ('bedah', 1, 'Benar'),
@@ -1651,6 +1590,7 @@ INSERT INTO `jumlahkata` (`nama_kata`, `jumlah`, `keterangan`) VALUES
 ('hedengren', 1, 'Salah Tulis'),
 ('smashing', 2, 'Benar'),
 ('beyond', 1, 'Benar'),
+('the', 1, 'Benar'),
 ('th', 1, 'Benar'),
 ('ed', 1, 'Benar'),
 ('magazine', 1, 'Benar'),
@@ -1697,7 +1637,6 @@ INSERT INTO `jumlahkata` (`nama_kata`, `jumlah`, `keterangan`) VALUES
 ('similingkar', 1, 'Salah Tulis'),
 ('wijaya', 1, 'Benar'),
 ('astuti', 1, 'Benar'),
-('blackbox', 1, 'Salah Tulis'),
 ('inka', 1, 'Benar'),
 ('persero', 1, 'Benar'),
 ('equivalence', 1, 'Benar'),
@@ -1712,7 +1651,7 @@ INSERT INTO `jumlahkata` (`nama_kata`, `jumlah`, `keterangan`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `karakter`
+-- Struktur dari tabel `karakter`
 --
 
 CREATE TABLE `karakter` (
@@ -1723,7 +1662,7 @@ CREATE TABLE `karakter` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `karakter`
+-- Dumping data untuk tabel `karakter`
 --
 
 INSERT INTO `karakter` (`id`, `jumlah`, `karakter`, `keterangan`) VALUES
@@ -1734,11 +1673,11 @@ INSERT INTO `karakter` (`id`, `jumlah`, `karakter`, `keterangan`) VALUES
 (5, 0, ' $', 'masih menggunakan karakter spasi'),
 (6, 0, ' %', 'masih ada spasi sebelum karakter %'),
 (7, 0, ' ^', 'masih menggunakan karakter spasi'),
-(8, 11, ' &', 'masih ada spasi sebelum karakter &'),
+(8, 2, ' &', 'masih ada spasi sebelum karakter &'),
 (9, 0, ' *', 'masih menggunakan karakter spasi'),
 (10, 0, '(', 'masih ada spasi setelah karakter ('),
 (11, 0, ' )', 'masih ada spasi sebelum karakter )'),
-(12, 136, ' -', 'masih ada spasi sebelum karakter -'),
+(12, 134, ' -', 'masih ada spasi sebelum karakter -'),
 (13, 0, ' _', 'masih menggunakan karakter spasi'),
 (14, 0, ' =', 'masih ada spasi sebelum karakter ='),
 (15, 0, ' +', 'masih menggunakan karakter spasi'),
@@ -1747,7 +1686,7 @@ INSERT INTO `karakter` (`id`, `jumlah`, `karakter`, `keterangan`) VALUES
 (18, 0, ' {', 'masih menggunakan karakter spasi'),
 (19, 0, ' }', 'masih ada spasi sebelum karakter }'),
 (20, 0, ' |', 'masih menggunakan karakter spasi'),
-(21, 8, ' :', 'masih ada spasi sebelum karakter :'),
+(21, 6, ' :', 'masih ada spasi sebelum karakter :'),
 (22, 0, ' ;', 'masih ada spasi sebelum karakter ;'),
 (23, 0, ' \'', 'masih menggunakan karakter spasi'),
 (24, 0, ' <', 'masih menggunakan karakter spasi'),
@@ -1759,33 +1698,33 @@ INSERT INTO `karakter` (`id`, `jumlah`, `karakter`, `keterangan`) VALUES
 (30, 0, ' `', 'masih menggunakan karakter spasi'),
 (31, 0, ' !', 'masih menggunakan karakter spasi'),
 (32, 0, 'bab i', ' tidak perlu kata BAB'),
-(33, 2, 'kita', ' Cek ulang penggunaan kata KITA'),
+(33, 0, 'kita', ' Cek ulang penggunaan kata KITA'),
 (34, 0, '1 berikut', 'Apakah ada kata Gambar xx berikut?'),
 (35, 0, 'antar muka', 'Penulisan yang benar: antarmuka'),
 (36, 0, 'android', 'Yang benar Android karena nama.'),
 (37, 0, 'kesimpulan dan saran', 'Coba cek lagi di panduan.'),
 (38, 0, 'usecase', 'apakah yang benar adalah \'use case\'?'),
-(39, 1, 'terimakasih', 'yang benar adalah \'terima kasih\' ...'),
+(39, 0, 'terimakasih', 'yang benar adalah \'terima kasih\' ...'),
 (40, 0, 'dimasukan', 'kurang huruf k ya ...?'),
-(41, 1, 'diinputkan', 'di-input-kan ... input miring ...'),
+(41, 0, 'diinputkan', 'di-input-kan ... input miring ...'),
 (42, 0, 'mejangkau', 'menjangkau'),
-(43, 2, 'dimana', 'di mana dan dimana, yang tepat adalah di mana.'),
-(44, 1, 'menunjukan', 'yang benar menunjukkan?'),
+(43, 0, 'dimana', 'di mana dan dimana, yang tepat adalah di mana.'),
+(44, 0, 'menunjukan', 'yang benar menunjukkan?'),
 (45, 0, 'dikemudian', 'Yang benar \'di kemudian\''),
 (46, 0, 'white box', 'Menurut Pressman \'white-box\''),
-(47, 15, 'black box', 'Menurut Pressman \'black-box\''),
+(47, 0, 'black box', 'Menurut Pressman \'black-box\''),
 (48, 0, 'whitebox', 'Menurut Pressman \'white-box\''),
-(49, 1, 'blackbox', 'Menurut Pressman \'black-box\''),
+(49, 0, 'blackbox', 'Menurut Pressman \'black-box\''),
 (50, 0, 'menginputkan', 'meng-input-kan ... input miring ...'),
-(51, 0, 'rancang bangun', 'Diganti dengan Pengembangan ...'),
+(51, 0, 'rancang bangun', 'Diganti dengan Pengembangan kalau bukan judul dari tempat lain ...'),
 (52, 0, 'kedalam', 'Yang benar \'ke dalam\' ...'),
 (53, 24, 'saya', ' Cek ulang penggunaan kata SAYA'),
 (54, 0, 'mendownload', 'Yang benar mengunduh atau men-download'),
 (55, 0, 'suripto dwi yuwono, m.t.', 'Rujukannya dari mana ?'),
-(56, 1, 'motto', 'bentuk yang baku adalah moto'),
+(56, 0, 'motto', 'bentuk yang baku adalah moto'),
 (57, 0, 'penginputan', 'peng-input-an (input ditulis miring)'),
 (58, 1, ' nya', 'tidak perlu spasi'),
-(59, 1, 'menunjukan', 'Penulisan yang benar menunjukkan'),
+(59, 0, 'menunjukan', 'Penulisan yang benar menunjukkan'),
 (60, 0, 'mereka', 'Cek lagi penggunaan kata mereka'),
 (61, 3, 'pada gambar', 'pada Gambar (G huruf besar)'),
 (62, 0, 'senin', 'Penulisan nama hari diawali huruf besar'),
@@ -1805,7 +1744,7 @@ INSERT INTO `karakter` (`id`, `jumlah`, `karakter`, `keterangan`) VALUES
 (76, 0, 'di ubah', 'Awalan di yang diikuti kata kerja, menulisnya disambung'),
 (77, 0, 'di retas', 'Awalan di yang diikuti kata kerja, menulisnya disambung'),
 (78, 0, 'di tambahkan', 'Awalan di yang diikuti kata kerja, menulisnya disambung'),
-(79, 2, 'di pahami', 'Awalan di yang diikuti kata kerja, menulisnya disambung'),
+(79, 0, 'di pahami', 'Awalan di yang diikuti kata kerja, menulisnya disambung'),
 (80, 0, 'di nilai', 'Awalan di yang diikuti kata kerja, menulisnya disambung'),
 (81, 0, 'di letakkan', 'Awalan di yang diikuti kata kerja, menulisnya disambung'),
 (82, 0, 'didecode', 'Campuran bahasa Indonesia-Inggris'),
@@ -1814,9 +1753,9 @@ INSERT INTO `karakter` (`id`, `jumlah`, `karakter`, `keterangan`) VALUES
 (85, 0, 'terpisah', 'Lebih tepat dengan kata dipisah'),
 (86, 0, 'terpasang', 'Lebih tepat dengan kata dipasang'),
 (87, 0, 'terhapus', 'Lebih tepat dengan kata dihapus'),
-(88, 1, 'disetiap', 'Awalan di dengan keterangan tempat/waktu, dipisah ...'),
+(88, 0, 'disetiap', 'Awalan di dengan keterangan tempat/waktu, dipisah ...'),
 (89, 0, 'di paksakan', 'Awalan di yang diikuti kata kerja, menulisnya disambung'),
-(90, 1, 'dicantum', 'Kata ini perlu diberi akhiran ...'),
+(90, 0, 'dicantum', 'Kata ini perlu diberi akhiran ...'),
 (91, 0, 'kwitansi', 'Bentuk bakunya kuitansi.'),
 (92, 0, 'penggunaanya', 'Kurang huruf n ... penggunaannya'),
 (93, 0, 'terduga', 'Lebih tepat dengan kata diduga'),
@@ -1836,18 +1775,19 @@ INSERT INTO `karakter` (`id`, `jumlah`, `karakter`, `keterangan`) VALUES
 (107, 0, 'fulfil', 'Yang benar adalah fulfill ...'),
 (108, 0, 'asses', 'Apakah bukan asses ...'),
 (109, 0, 'disana', 'Karena keterangan tempat, maka penulisannya dipisah ...'),
-(110, 11, 'diharapkan', 'Istilah yang pas adalah yang dapat ... bukan yang diharapkan ...'),
+(110, 0, 'diharapkan', 'Istilah yang pas adalah yang dapat ... bukan yang diharapkan ...'),
 (111, 0, 'hidayahnya', 'Seharusnya ditulis hidayah-Nya ...'),
 (112, 0, 'mengoordinasikan', 'Yang benar adalah mengkoordinasikan ...'),
 (113, 0, 'di larang', 'Awalan di yang diikuti kata kerja, menulisnya disambung'),
 (114, 0, 'sumberdaya', 'Yang benar sumber daya ...'),
 (115, 0, 'excell', 'Yang benar Excel ...'),
-(116, 1, 'dicantum', 'Mungkin yang benar dicantumkan ...');
+(116, 0, 'dicantum', 'Mungkin yang benar dicantumkan ...'),
+(117, 1, 'diantaranya', 'Yang benar \'di antaranya\' ...');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `kata_dasar`
+-- Struktur dari tabel `kata_dasar`
 --
 
 CREATE TABLE `kata_dasar` (
@@ -1856,7 +1796,7 @@ CREATE TABLE `kata_dasar` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `kata_dasar`
+-- Dumping data untuk tabel `kata_dasar`
 --
 
 INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
@@ -1875,6 +1815,7 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (40910, 'abangan'),
 (40911, 'abangga'),
 (40912, 'abatoar'),
+(47699, 'abbas'),
 (40914, 'abbi'),
 (40915, 'abc'),
 (40916, 'abdas'),
@@ -2240,6 +2181,7 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (47631, 'akhlak'),
 (45716, 'akhmad'),
 (44966, 'akmal'),
+(47700, 'akmi'),
 (40592, 'akreditasi'),
 (45765, 'aksara'),
 (44723, 'akses'),
@@ -2311,6 +2253,7 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (41144, 'alyzea'),
 (41145, 'am'),
 (47366, 'amal'),
+(47701, 'amalia'),
 (44908, 'amanah'),
 (46756, 'amanat'),
 (40018, 'amazon'),
@@ -2353,6 +2296,7 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (39671, 'anda'),
 (44968, 'andal'),
 (47396, 'andanan'),
+(47702, 'andhika'),
 (40849, 'andi'),
 (45921, 'andika'),
 (47488, 'andini'),
@@ -2377,6 +2321,7 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (39523, 'annida'),
 (45090, 'annisa'),
 (39748, 'annual'),
+(47703, 'anomali'),
 (46091, 'anonim'),
 (39749, 'another'),
 (44585, 'anshori'),
@@ -2430,6 +2375,7 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (46528, 'aqidah'),
 (46717, 'arab'),
 (44964, 'arabic'),
+(47737, 'arafat'),
 (45693, 'arah'),
 (40639, 'arahan'),
 (40796, 'arahma'),
@@ -2633,6 +2579,7 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (39608, 'balsamiq'),
 (40265, 'bambang'),
 (47398, 'bambu'),
+(47754, 'ban'),
 (40335, 'banda'),
 (39544, 'bandar'),
 (40788, 'bandara'),
@@ -2684,6 +2631,7 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (47399, 'batik'),
 (40752, 'batu'),
 (45512, 'batuk'),
+(47704, 'baturaja'),
 (39610, 'bawaan'),
 (39554, 'bawah'),
 (41162, 'bawang'),
@@ -2850,6 +2798,7 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (45060, 'bioinformatics'),
 (45300, 'biokimia'),
 (47132, 'bioskop'),
+(47705, 'birmingham'),
 (46541, 'birokrasi'),
 (40339, 'birth'),
 (39787, 'birthday'),
@@ -2887,6 +2836,7 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (45724, 'boolean'),
 (39789, 'boot'),
 (46298, 'bootstrap'),
+(47755, 'borang'),
 (46221, 'borrow'),
 (46102, 'borrowing'),
 (39460, 'bosan'),
@@ -3071,6 +3021,7 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (40169, 'chat'),
 (39803, 'chatbot'),
 (39804, 'chatting'),
+(47706, 'chaudhary'),
 (45120, 'cheap'),
 (40510, 'cheating'),
 (46106, 'check'),
@@ -3142,6 +3093,7 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (45553, 'community'),
 (45307, 'companies'),
 (40280, 'company'),
+(47707, 'comparative'),
 (47020, 'compared'),
 (40056, 'comparison'),
 (45123, 'compatibility'),
@@ -3446,6 +3398,7 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (40809, 'dewi'),
 (40566, 'dfd'),
 (39538, 'dhanoepojo'),
+(47708, 'dharma'),
 (45769, 'dharwiyanti'),
 (45138, 'dhella'),
 (46035, 'dhiandra'),
@@ -3610,6 +3563,7 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (46552, 'diperketat'),
 (44633, 'diperoleh'),
 (47142, 'dipetakan'),
+(47709, 'dipilah'),
 (39327, 'dipilih'),
 (46120, 'dipindahkan'),
 (45891, 'dipinjam'),
@@ -3804,6 +3758,7 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (41267, 'eksoenzim'),
 (41268, 'ekspansionistis'),
 (47619, 'ekspedisi'),
+(47738, 'ekspektasi'),
 (45148, 'ekspektoran'),
 (46555, 'eksperimen'),
 (45429, 'ekspirasi'),
@@ -3827,6 +3782,7 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (39857, 'elektro'),
 (44634, 'elektronik'),
 (40570, 'elektronika'),
+(47710, 'elektronis'),
 (44955, 'elemen'),
 (47696, 'elementor'),
 (45520, 'eliminasi'),
@@ -4076,6 +4032,7 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (45938, 'fergie'),
 (45321, 'ferian'),
 (41304, 'fernando'),
+(47739, 'ferrari'),
 (45432, 'feses'),
 (47592, 'fetching'),
 (39868, 'few'),
@@ -4103,6 +4060,7 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (46239, 'findings'),
 (39703, 'finish'),
 (41308, 'fiqh'),
+(47711, 'firaztori'),
 (44990, 'firdaus'),
 (45573, 'firefox'),
 (41309, 'firmansyah'),
@@ -4115,6 +4073,7 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (47149, 'fitra'),
 (39872, 'fitri'),
 (46421, 'fitria'),
+(47712, 'fitriana'),
 (41310, 'fitriani'),
 (41311, 'fitted'),
 (39572, 'fitur'),
@@ -4282,6 +4241,7 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (46560, 'ghazali'),
 (40573, 'ghozali'),
 (39683, 'ghz'),
+(47713, 'gidion'),
 (45516, 'gigi'),
 (44922, 'ginanjar'),
 (45514, 'ginjal'),
@@ -4377,6 +4337,7 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (41363, 'haccp'),
 (40674, 'hack'),
 (46561, 'hadi'),
+(47740, 'hadiprakoso'),
 (40112, 'hadir'),
 (44992, 'hadirat'),
 (39887, 'hadirnya'),
@@ -4440,6 +4401,7 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (40113, 'harianto'),
 (46241, 'hariman'),
 (39353, 'harinya'),
+(47741, 'hariyadi'),
 (41368, 'harm'),
 (46454, 'harmoni'),
 (41369, 'harmonis'),
@@ -4604,7 +4566,8 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (41445, 'hirau'),
 (41446, 'hirudin'),
 (41447, 'hiruk'),
-(41448, 'hirup'),
+(41448, 'hirup');
+INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (41449, 'his'),
 (41450, 'histeria'),
 (41451, 'histerisis'),
@@ -4626,8 +4589,7 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (41464, 'hodometer'),
 (41465, 'hoki'),
 (41466, 'holders'),
-(41467, 'holding');
-INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
+(41467, 'holding'),
 (46456, 'holil'),
 (46910, 'holistic'),
 (41468, 'holistis'),
@@ -4922,6 +4884,7 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (41704, 'imperfek'),
 (41705, 'imperfeksi'),
 (41706, 'imperialisme'),
+(47714, 'imperiled'),
 (41707, 'impersonal'),
 (41708, 'impersonalia'),
 (41709, 'impersonalitas'),
@@ -5012,6 +4975,7 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (40461, 'indicate'),
 (45943, 'indicates'),
 (41761, 'indications'),
+(47742, 'indicator'),
 (41762, 'indik'),
 (41763, 'indikan'),
 (44877, 'indikator'),
@@ -6410,9 +6374,11 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (42761, 'khaerul'),
 (42762, 'khair'),
 (42763, 'khairani'),
+(47715, 'khalayak'),
 (42764, 'khalifatullah'),
 (42765, 'khalikah'),
 (42766, 'khamar'),
+(47716, 'khas'),
 (42767, 'khasanah'),
 (42768, 'khasiat'),
 (42769, 'khat'),
@@ -6770,6 +6736,7 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (45518, 'kulit'),
 (42983, 'kulminasi'),
 (42984, 'kulon'),
+(47717, 'kulonprogo'),
 (42985, 'kultus'),
 (47459, 'kumala'),
 (47341, 'kumaladewi'),
@@ -7204,6 +7171,7 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (43235, 'lompok'),
 (43236, 'lonan'),
 (45218, 'long'),
+(47718, 'longman'),
 (47601, 'longtext'),
 (43237, 'longtorso'),
 (45345, 'lontar'),
@@ -7261,6 +7229,7 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (39923, 'macam'),
 (40130, 'machine'),
 (46164, 'machudor'),
+(47719, 'macintosh'),
 (43265, 'madah'),
 (39924, 'made'),
 (46608, 'madhi'),
@@ -7356,6 +7325,7 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (44623, 'mampu'),
 (44650, 'man'),
 (39376, 'mana'),
+(47753, 'manado'),
 (39928, 'manage'),
 (40433, 'managed'),
 (45865, 'managemen'),
@@ -7367,7 +7337,8 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (45075, 'manajemen'),
 (39929, 'manajer'),
 (45816, 'manajerial'),
-(46304, 'mandagi'),
+(46304, 'mandagi');
+INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (43312, 'mandah'),
 (43313, 'mandam'),
 (46744, 'mandat'),
@@ -7391,14 +7362,14 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (47045, 'manorang'),
 (43324, 'mansiang'),
 (44523, 'mansour'),
+(47751, 'mansyur'),
 (46612, 'mantap'),
 (47296, 'mantik'),
 (43325, 'mantisa'),
 (43326, 'manual'),
 (43327, 'manufacture'),
 (39930, 'manufacturer'),
-(44524, 'manufaktur');
-INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
+(44524, 'manufaktur'),
 (43328, 'manunggal'),
 (45349, 'manurung'),
 (45047, 'manusia'),
@@ -7486,6 +7457,7 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (43374, 'matihi'),
 (46305, 'matin'),
 (43375, 'matra'),
+(47720, 'matrik'),
 (44819, 'matriks'),
 (45961, 'matter'),
 (46614, 'mau'),
@@ -7624,6 +7596,7 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (39937, 'memperkuat'),
 (44626, 'mempermudah'),
 (44627, 'memperoleh'),
+(47721, 'memprediksi'),
 (46479, 'mempresentasikan'),
 (45665, 'mempromosikan'),
 (45887, 'mempunyai'),
@@ -7862,6 +7835,7 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (43480, 'miliuner'),
 (43481, 'mimisan'),
 (46172, 'minamoto'),
+(47743, 'minarno'),
 (44832, 'minat'),
 (40385, 'mind'),
 (43482, 'mindfulness'),
@@ -7900,6 +7874,7 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (43497, 'misogami'),
 (43498, 'missile'),
 (43499, 'missing'),
+(47722, 'mister'),
 (46174, 'mit'),
 (45247, 'mitigasi'),
 (43500, 'mitologis'),
@@ -8256,7 +8231,6 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (45777, 'nilai'),
 (43681, 'nilam'),
 (43682, 'nina'),
-(17860, 'ningnong'),
 (43683, 'ningsih'),
 (43684, 'ninitowok'),
 (40729, 'nip'),
@@ -8362,7 +8336,9 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (46021, 'nurdiana'),
 (47675, 'nurdin'),
 (43744, 'nurhayati'),
+(47723, 'nurhayatun'),
 (43745, 'nurlita'),
+(47744, 'nurrahmi'),
 (43746, 'nursalam'),
 (45258, 'nurse'),
 (47549, 'nurseptaji'),
@@ -8370,6 +8346,7 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (45448, 'nursing'),
 (43747, 'nurudin'),
 (45358, 'nurul'),
+(47724, 'nurwanto'),
 (43748, 'nuryana'),
 (45359, 'nusa'),
 (43749, 'nusaindah'),
@@ -8446,6 +8423,8 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (43786, 'oktopanda'),
 (43787, 'oku'),
 (43788, 'okulis'),
+(47725, 'olah'),
+(47745, 'olahan'),
 (43789, 'olak'),
 (47186, 'old'),
 (44637, 'oleh'),
@@ -8759,6 +8738,7 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (43968, 'paralipsis'),
 (45622, 'parallel'),
 (39665, 'parameter'),
+(47746, 'paramitha'),
 (44604, 'params'),
 (43969, 'paranormal'),
 (43970, 'parapati'),
@@ -8767,6 +8747,7 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (43973, 'parasitoid'),
 (43974, 'parasut'),
 (43975, 'paratifus'),
+(47747, 'pardanus'),
 (43976, 'pare'),
 (39666, 'parent'),
 (43977, 'parenteral'),
@@ -9326,6 +9307,7 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (44269, 'pirically'),
 (44270, 'piriform'),
 (44271, 'pirolisis'),
+(47748, 'pirozzi'),
 (40147, 'pisah'),
 (44272, 'pit'),
 (44273, 'pitometer'),
@@ -9445,6 +9427,7 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (44336, 'pplptk'),
 (46521, 'prabowo'),
 (45756, 'prabumulih'),
+(47726, 'practical'),
 (45467, 'practice'),
 (45279, 'practiced'),
 (46394, 'practices'),
@@ -9453,6 +9436,7 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (45757, 'practitioners'),
 (40721, 'pradana'),
 (44337, 'pradipta'),
+(47727, 'pradya'),
 (44338, 'pragmatic'),
 (46656, 'pragmatis'),
 (44339, 'pragmatisme'),
@@ -9566,6 +9550,7 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (45991, 'progres'),
 (46194, 'progress'),
 (45692, 'project'),
+(47728, 'promosi'),
 (47199, 'promoting'),
 (46504, 'promotor'),
 (40401, 'proof'),
@@ -9615,6 +9600,7 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (47250, 'publish'),
 (39973, 'published'),
 (46076, 'publisher'),
+(47729, 'publishing'),
 (47558, 'pudjoatmodjo'),
 (47387, 'puji'),
 (46058, 'pukul'),
@@ -9666,6 +9652,7 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (47205, 'quick'),
 (46202, 'quickly'),
 (47206, 'quiz'),
+(47749, 'rachmadi'),
 (46524, 'rad'),
 (46048, 'radar'),
 (46429, 'radeon'),
@@ -9733,6 +9720,7 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (40148, 'react'),
 (47255, 'read'),
 (47445, 'reader'),
+(47730, 'reading'),
 (47108, 'ready'),
 (47210, 'real'),
 (46663, 'realisasi'),
@@ -9758,6 +9746,7 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (46277, 'referensi'),
 (47682, 'refleksi'),
 (46665, 'reformasi'),
+(47731, 'reg'),
 (46278, 'regency'),
 (46700, 'register'),
 (47606, 'registered'),
@@ -9769,7 +9758,6 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (46935, 'regulasi'),
 (47213, 'reilly'),
 (47361, 'reject'),
-(21579, 'rekah'),
 (46279, 'rekan'),
 (46068, 'rekapitulasi'),
 (46399, 'rekayasa'),
@@ -9801,6 +9789,7 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (40552, 'repairing'),
 (46879, 'repeatable'),
 (46508, 'repetition'),
+(47732, 'report'),
 (47215, 'reporting'),
 (46515, 'reports'),
 (46509, 'repository'),
@@ -9857,6 +9846,7 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (46671, 'revitalisasi'),
 (45786, 'reward'),
 (47383, 'rezekinya'),
+(47752, 'rianto'),
 (47566, 'ribuan'),
 (46209, 'richardus'),
 (46354, 'ridson'),
@@ -9864,6 +9854,7 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (44541, 'riki'),
 (46880, 'rilis'),
 (45761, 'rinci'),
+(47733, 'ringan'),
 (46881, 'ringkas'),
 (46969, 'rio'),
 (40149, 'rises'),
@@ -10041,7 +10032,8 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (22193, 'ronta'),
 (22194, 'rontek'),
 (22195, 'rontgen'),
-(22196, 'rontok'),
+(22196, 'rontok');
+INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (22197, 'ronyeh'),
 (22198, 'ronyok'),
 (33776, 'roohullah'),
@@ -10096,8 +10088,7 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (22217, 'royak'),
 (22218, 'royal'),
 (22219, 'royalti'),
-(22220, 'royan');
-INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
+(22220, 'royan'),
 (31501, 'royce'),
 (22221, 'royemen'),
 (22222, 'royer'),
@@ -10422,6 +10413,7 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (22463, 'sailo'),
 (22464, 'saing'),
 (22465, 'sains'),
+(47734, 'sainstech'),
 (31179, 'saintek'),
 (37486, 'saintikom'),
 (22466, 'saintis'),
@@ -10988,6 +10980,7 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (36302, 'scipy'),
 (37427, 'scoot'),
 (36587, 'scope'),
+(47735, 'scopindo'),
 (36413, 'scopus'),
 (30088, 'score'),
 (37102, 'scores'),
@@ -12389,6 +12382,7 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (31042, 'showpopup'),
 (28857, 'shows'),
 (31043, 'showtoast'),
+(47750, 'shrivastava'),
 (36497, 'shuai'),
 (30214, 'shubham'),
 (34441, 'shuffle'),
@@ -12813,7 +12807,8 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (24294, 'sinuhun'),
 (24295, 'sinus'),
 (24296, 'sinusal'),
-(24297, 'sinusitis'),
+(24297, 'sinusitis');
+INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (24298, 'sinusoid'),
 (24299, 'sinyal'),
 (24300, 'sinyalemen'),
@@ -12869,8 +12864,7 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (24342, 'sirkuit'),
 (24343, 'sirkulasi'),
 (24344, 'sirkuler'),
-(24345, 'sirkumfiks');
-INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
+(24345, 'sirkumfiks'),
 (24346, 'sirkumfleks'),
 (24347, 'sirkus'),
 (24348, 'sirlak'),
@@ -14553,6 +14547,7 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (25356, 'syiwaratri'),
 (39986, 'syllabus'),
 (32385, 'symbian'),
+(47736, 'symbiosis'),
 (28371, 'symbol'),
 (34771, 'symposium'),
 (35207, 'symptoms'),
@@ -15590,7 +15585,8 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (26254, 'tenggayung'),
 (26255, 'tenggehem'),
 (26256, 'tenggek'),
-(26257, 'tenggelam'),
+(26257, 'tenggelam');
+INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (26258, 'tengger'),
 (26259, 'tenggiling'),
 (26260, 'tenggiri'),
@@ -15644,8 +15640,7 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (26306, 'tentatif'),
 (26307, 'tentawan'),
 (26308, 'tenteng'),
-(26309, 'tenteram');
-INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
+(26309, 'tenteram'),
 (31797, 'tenth'),
 (26310, 'tentir'),
 (29334, 'tentram'),
@@ -18428,7 +18423,8 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (28154, 'xifoid'),
 (33911, 'xii'),
 (30801, 'xiiidaftar'),
-(30802, 'xiisanwacana'),
+(30802, 'xiisanwacana');
+INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (28155, 'xilem'),
 (28156, 'xilena'),
 (28157, 'xilofon'),
@@ -18489,8 +18485,7 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 (28186, 'yantra'),
 (33797, 'yanuar'),
 (31621, 'yanyan'),
-(36334, 'yaowen');
-INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
+(36334, 'yaowen'),
 (47261, 'yaqin'),
 (33798, 'yaqrau'),
 (28187, 'yard'),
@@ -18797,7 +18792,7 @@ INSERT INTO `kata_dasar` (`id`, `kata_dasar`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `kata_dasar_asli`
+-- Struktur dari tabel `kata_dasar_asli`
 --
 
 CREATE TABLE `kata_dasar_asli` (
@@ -18806,7 +18801,7 @@ CREATE TABLE `kata_dasar_asli` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `kata_dasar_asli`
+-- Dumping data untuk tabel `kata_dasar_asli`
 --
 
 INSERT INTO `kata_dasar_asli` (`id`, `kata_dasar`) VALUES
@@ -47296,7 +47291,7 @@ INSERT INTO `kata_dasar_asli` (`id`, `kata_dasar`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `kata_dasar_lama`
+-- Struktur dari tabel `kata_dasar_lama`
 --
 
 CREATE TABLE `kata_dasar_lama` (
@@ -47305,7 +47300,7 @@ CREATE TABLE `kata_dasar_lama` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `kata_dasar_lama`
+-- Dumping data untuk tabel `kata_dasar_lama`
 --
 
 INSERT INTO `kata_dasar_lama` (`id`, `kata_dasar`) VALUES
@@ -76072,7 +76067,7 @@ INSERT INTO `kata_dasar_lama` (`id`, `kata_dasar`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ket_tempat`
+-- Struktur dari tabel `ket_tempat`
 --
 
 CREATE TABLE `ket_tempat` (
@@ -76083,7 +76078,7 @@ CREATE TABLE `ket_tempat` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `upload`
+-- Struktur dari tabel `upload`
 --
 
 CREATE TABLE `upload` (
@@ -76092,24 +76087,24 @@ CREATE TABLE `upload` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `upload`
+-- Dumping data untuk tabel `upload`
 --
 
 INSERT INTO `upload` (`id`, `nama`) VALUES
-(1, 'Zahira Daaniya_Seminar TA.docx');
+(1, 'Zahira Daaniya_Revisi.docx');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `karakter`
+-- Indeks untuk tabel `karakter`
 --
 ALTER TABLE `karakter`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `kata_dasar`
+-- Indeks untuk tabel `kata_dasar`
 --
 ALTER TABLE `kata_dasar`
   ADD PRIMARY KEY (`id`),
@@ -76118,65 +76113,65 @@ ALTER TABLE `kata_dasar`
   ADD UNIQUE KEY `kata_dasar_3` (`kata_dasar`);
 
 --
--- Indexes for table `kata_dasar_asli`
+-- Indeks untuk tabel `kata_dasar_asli`
 --
 ALTER TABLE `kata_dasar_asli`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `kata_dasar_lama`
+-- Indeks untuk tabel `kata_dasar_lama`
 --
 ALTER TABLE `kata_dasar_lama`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `ket_tempat`
+-- Indeks untuk tabel `ket_tempat`
 --
 ALTER TABLE `ket_tempat`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `upload`
+-- Indeks untuk tabel `upload`
 --
 ALTER TABLE `upload`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `karakter`
+-- AUTO_INCREMENT untuk tabel `karakter`
 --
 ALTER TABLE `karakter`
-  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=117;
+  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=118;
 
 --
--- AUTO_INCREMENT for table `kata_dasar`
+-- AUTO_INCREMENT untuk tabel `kata_dasar`
 --
 ALTER TABLE `kata_dasar`
-  MODIFY `id` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47699;
+  MODIFY `id` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47756;
 
 --
--- AUTO_INCREMENT for table `kata_dasar_asli`
+-- AUTO_INCREMENT untuk tabel `kata_dasar_asli`
 --
 ALTER TABLE `kata_dasar_asli`
   MODIFY `id` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28488;
 
 --
--- AUTO_INCREMENT for table `kata_dasar_lama`
+-- AUTO_INCREMENT untuk tabel `kata_dasar_lama`
 --
 ALTER TABLE `kata_dasar_lama`
   MODIFY `id` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28770;
 
 --
--- AUTO_INCREMENT for table `ket_tempat`
+-- AUTO_INCREMENT untuk tabel `ket_tempat`
 --
 ALTER TABLE `ket_tempat`
   MODIFY `id` int(6) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `upload`
+-- AUTO_INCREMENT untuk tabel `upload`
 --
 ALTER TABLE `upload`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
