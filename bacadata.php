@@ -21,13 +21,13 @@
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
       
         // Display the result in the element with id="demo"
-        document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-        + minutes + "m " + seconds + "s ";
+        document.getElementById("demo").innerHTML = "Batas pengisian data: "+days + " hari " + hours + " jam "
+        + minutes + " menit " + seconds + " detik ";
       
         // If the count down is finished, write some text
         if (distance < 0) {
           clearInterval(x);
-          document.getElementById("demo").innerHTML = "EXPIRED";
+          document.getElementById("demo").innerHTML = "Waktu sudah habis ...";
         }
       }, 1000);
       </script>    
@@ -44,21 +44,24 @@
    echo "<h1>Baca Data Anggota</h1>";
 
    // membuat koneksi ke server
+   //                     server      username password   basis data
    $konek=mysqli_connect("localhost","dwijim","12345678","latihan");
 
-   // membuat kueri
-   $kueri = "select nama_lengkap from manusia order by nama_lengkap";
+   // membuat kueri sesuai dengan kebutuhan
+   $kueri = "select nama_lengkap from manusia 
+             where  nama_lengkap like '%di%'
+             order by nama_lengkap";
 
    // menjalankan kueri dan menyimpan hasilnya ke variabel
    $hasil = mysqli_query($konek,$kueri);
 
-   // membuat tabel
+   // membuat tabel supaya tampilan lebih rapi
    echo "<table border=1>";
 
    // membuat nomor urut
    $nomor = 1;
 
-   // memotong hasil kueri
+   // memotong hasil kueri ke dalam variabel $data
    while ($data=mysqli_fetch_array($hasil))
    {
       echo "<tr>";
