@@ -18,7 +18,7 @@
         $kosongin_kata  =mysqli_query($conn,"TRUNCATE table jumlahkata");
         $kosongin_upload=mysqli_query($conn,"TRUNCATE table upload");
         
-        echo "upload: $upload";
+        echo "Unggah berkas: $upload";
 
         if ($_POST['upload']) {
         
@@ -32,7 +32,9 @@
  
 						if(in_array($ekstensi, $ekstensi_diperbolehkan) == true){			
 								move_uploaded_file($file_tmp, 'file/'.$nama);
-								$query = mysqli_query($conn,"INSERT INTO upload VALUES(NULL, '$nama')");
+								// dwi sakethi 23 november 2023
+								// $query = mysqli_query($conn,"INSERT INTO upload VALUES(NULL, '$nama')");
+								$query = mysqli_query($conn,"INSERT INTO upload VALUES(1,'$nama')");
 								echo '<META HTTP-EQUIV="Refresh" Content="0; URL=file/baca.php">';
 								echo '<div class="preloader"> 
 											<div class="loading">
