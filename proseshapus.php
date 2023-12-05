@@ -56,5 +56,6 @@ echo "$nomor_data<br>";
    //echo "$kueri<br>";
    // menjalankan kueri dan menyimpan hasilnya ke variabel
    $hasil = mysqli_query($konek,$kueri);
-
+echo "<br>";
+echo "Kli <a href=hapus.php>di sini ...</a>"
 ?>
