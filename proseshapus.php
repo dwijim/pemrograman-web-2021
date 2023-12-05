@@ -47,7 +47,7 @@
    //                     server      username password   basis data
    $konek=mysqli_connect("localhost","dwijim","12345678","latihan");
 
-   $nomor_data = $_GET[nomor_data];
+   $nomor_data = $_GET["nomor_data"];
 echo "$nomor_data<br>";
 
    // membuat kueri sesuai dengan kebutuhan
