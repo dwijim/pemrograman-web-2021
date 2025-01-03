@@ -118,6 +118,16 @@ function hapus_spasi_spam($cus){
 	return $cus;
 }
 
+// fungsi untuk membuang tulisan tambahan judul gambar
+function hapus_tambahan_judul_gambar($cus){
+	$cus = trim($cus);
+    $tulisan_tambahan = 'Gambar SEQ Gambar \* ARABIC ';
+	while(strpos($cus,$tulisan_tambahan)){
+        $cus = str_replace($tulisan_tambahan,'',$cus);
+	}
+	return $cus;
+}
+
 //mengambil dokumen yang diupload pada database untuk di eksekusi
 $nama=mysqli_query($conn,"select nama from upload where id = 1");
 $nama1=mysqli_fetch_assoc($nama);
@@ -125,15 +135,17 @@ $nama2= $nama1['nama'];
 $gass=$nama2;
 $isi=new docxConversion($gass);
 $isi=$isi->convertToText();
+$isi=hapus_tambahan_judul_gambar($isi);
 //echo $isi;
 /* --------------------------------------------------------
    Gambar 4.
    Gambar 14.
    -------------------------------------------------------- */
 
-$kata_yang_dicari    = "Gambar";   
+$kata_yang_dicari    = "Gambar ";   
 $bukan_judul_gambar1 = "Gambar \*";   
 $bukan_judul_gambar2 = "Gambar SE";   
+$tulisan_tambahan    = "Gambar SEQ Gambar \* ARABIC "; // 5.
 $titik_satu          = 9;
 $titik_dua           = 10;
 $panjang_skripsi     = strlen($isi);
@@ -146,15 +158,68 @@ for ($proses=0;$proses<=$panjang_skripsi;$proses++)
    $potongan_isi = substr($isi,$proses,$panjang_kata_yang_dicari);
    if ($potongan_isi==$kata_yang_dicari)
       {
-        $cek_judul_gambar = substr($isi,$proses,$panjang_kata_yang_dicari+3);
+        $cek_judul_gambar = substr($isi,$proses,$panjang_kata_yang_dicari+2);
+
+        // sebelah kanan kata gambar, harus angka
+        $posisi_angka = $proses+$panjang_kata_yang_dicari;
+        $apakah_angka = substr($isi,$posisi_angka,1);
+        $nilai = intval($apakah_angka);
+
+        if ($nilai<=0) { continue; }
+
+        // apakah sebelah angka, berisi titik atau angka lagi
+        $apakah_titik = substr($isi,$posisi_angka+1,1);
+
+        if ($apakah_titik==".")
+           {
+             $judul_gambarnya = substr($isi,$proses,$panjang_kata_yang_dicari+2);
+             $satu_digit = true;
+           }
+        else
+           {
+            $satu_digit = false;
+            $judul_gambarnya = substr($isi,$proses,$panjang_kata_yang_dicari+3);
+
+            // apakah sebelah angka, berisi titik atau angka lagi
+            $apakah_titik = substr($isi,$posisi_angka+2,1);
+            if ($apakah_titik!=".") {continue;}
+
+           }   
+        /*
+        echo "cek ...<br>";
+        echo "Cek Judul : ".$cek_judul_gambar."<br>";
+        echo "Cek Bukan Judul 1 : ".$bukan_judul_gambar1."<br>";
+        echo "Cek Bukan Judul 2 : ".$bukan_judul_gambar2."<br>";
         if ( ($cek_judul_gambar==$bukan_judul_gambar1) || 
              ($cek_judul_gambar==$bukan_judul_gambar2) 
              )
           {
             continue;
           }
-        $potongan_isi_tambahan = substr($isi,$proses,$panjang_kata_yang_dicari+17);
-        echo $potongan_isi_tambahan."<br>";
+        else
+        {
+            $potongan_isi_tambahan = substr($isi,$proses,$panjang_kata_yang_dicari+7);
+            //echo "Judul lengkap: ".$potongan_isi_tambahan."<br>";
+            echo "Judul lengkap: ".$potongan_isi_tambahan."<br>";
+        }
+      */
+       if ($satu_digit)
+          {
+            $potongan_isi_tambahan = substr($isi,$proses+1,$panjang_kata_yang_dicari+97);
+            $judul_akhir        = $judul_gambarnya . substr($potongan_isi_tambahan,45,77);
+        }
+       else
+          {
+            $potongan_isi_tambahan = substr($isi,$proses+2,$panjang_kata_yang_dicari+97);
+            $judul_akhir        = $judul_gambarnya . substr($potongan_isi_tambahan,46,77);
+        }
+
+        $judul_akhir = str_replace('..','.',$judul_akhir);
+       //$tulisan_tambahan      = 'Gambar SEQ Gambar \* ARABIC';
+   
+       //echo "Judul proses  : ".$potongan_isi_tambahan."<br>";
+       echo $judul_akhir."<br>";
+
       }
 
 }
