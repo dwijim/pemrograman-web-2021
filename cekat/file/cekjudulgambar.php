@@ -119,14 +119,16 @@ function hapus_spasi_spam($cus){
 }
 
 // fungsi untuk membuang tulisan tambahan judul gambar
-function hapus_tambahan_judul_gambar($cus){
+function hapus_tambahan_judul_gambar($cus)
+ {
 	$cus = trim($cus);
     $tulisan_tambahan = 'Gambar SEQ Gambar \* ARABIC ';
-	while(strpos($cus,$tulisan_tambahan)){
-        $cus = str_replace($tulisan_tambahan,'',$cus);
-	}
+	while(strpos($cus,$tulisan_tambahan))
+	  {
+        $cus = str_replace($tulisan_tambahan,' ',$cus);
+	  }
 	return $cus;
-}
+ }
 
 //mengambil dokumen yang diupload pada database untuk di eksekusi
 $nama=mysqli_query($conn,"select nama from upload where id = 1");
@@ -136,7 +138,11 @@ $gass=$nama2;
 $isi=new docxConversion($gass);
 $isi=$isi->convertToText();
 $isi=hapus_tambahan_judul_gambar($isi);
-//echo $isi;
+
+// kalau mau menampilkan isi hasil bacaan docx-nya
+// ini perintahnya
+//echo $isi."<br>";
+
 /* --------------------------------------------------------
    Gambar 4.
    Gambar 14.
@@ -152,10 +158,12 @@ $panjang_skripsi     = strlen($isi);
 $panjang_kata_yang_dicari = strlen($kata_yang_dicari);   
 
 
+
 // proses dari huruf pertama sampai dengan terakhir isi skripsi
 for ($proses=0;$proses<=$panjang_skripsi;$proses++)
 {
    $potongan_isi = substr($isi,$proses,$panjang_kata_yang_dicari);
+        //echo "$potongan_isi-$kata_yang_dicari-<br>";
    if ($potongan_isi==$kata_yang_dicari)
       {
         $cek_judul_gambar = substr($isi,$proses,$panjang_kata_yang_dicari+2);
@@ -165,6 +173,9 @@ for ($proses=0;$proses<=$panjang_skripsi;$proses++)
         $apakah_angka = substr($isi,$posisi_angka,1);
         $nilai = intval($apakah_angka);
 
+        // jika sebelah kanan tulisan gambar setelah titik
+        // bukan angka, maka tulisan Gambar ini diabaikan
+        // proses dilanjutkan ke  potongan tulisan berikutnya
         if ($nilai<=0) { continue; }
 
         // apakah sebelah angka, berisi titik atau angka lagi
@@ -205,12 +216,12 @@ for ($proses=0;$proses<=$panjang_skripsi;$proses++)
       */
        if ($satu_digit)
           {
-            $potongan_isi_tambahan = substr($isi,$proses+1,$panjang_kata_yang_dicari+97);
+            $potongan_isi_tambahan = substr($isi,$proses+1,$panjang_kata_yang_dicari+250);
             $judul_akhir        = $judul_gambarnya . substr($potongan_isi_tambahan,45,77);
         }
        else
           {
-            $potongan_isi_tambahan = substr($isi,$proses+2,$panjang_kata_yang_dicari+97);
+            $potongan_isi_tambahan = substr($isi,$proses+2,$panjang_kata_yang_dicari+250);
             $judul_akhir        = $judul_gambarnya . substr($potongan_isi_tambahan,46,77);
         }
 
@@ -218,7 +229,43 @@ for ($proses=0;$proses<=$panjang_skripsi;$proses++)
        //$tulisan_tambahan      = 'Gambar SEQ Gambar \* ARABIC';
    
        //echo "Judul proses  : ".$potongan_isi_tambahan."<br>";
-       echo $judul_akhir."<br>";
+       //echo $judul_akhir."<br>";
+       
+       // dalam judul kadang masih ada tulisan citation
+       // jadi ini harus dibuang
+       
+       $judul = "";
+       $posisi_citation = strpos($judul_akhir,"CITATION");
+       if ($posisi_citation!=0)
+       {
+       for ($karakter=0;$karakter<=$posisi_citation;$karakter++)
+          {
+            $judul = $judul.substr($judul_akhir,$karakter,1);
+          }       
+       $judul_akhir = $judul;
+       }      
+       // setelah didapatkan perkiraan judul gambar, selanjutnya
+       // membersihkan judul ini, mengambil dari awal tulisan Gambar
+       // sampai dengan ketemu titik dua kali
+       
+       $jumlah_titik_judul = 0;
+       $panjang = strlen($judul_akhir);
+       $judul = "";
+       for ($karakter=0;$karakter<=$panjang;$karakter++)
+          {
+            $huruf_ke = substr($judul_akhir,$karakter,1);
+            if ($huruf_ke==".") {$jumlah_titik_judul++;}
+            if ($jumlah_titik_judul==2)
+               { 
+                 $judul = $judul . $huruf_ke;
+                 break;
+               }
+            else 
+               {
+                 $judul = $judul . $huruf_ke;
+               }
+          }
+       echo $judul."<br>";
 
       }
 
