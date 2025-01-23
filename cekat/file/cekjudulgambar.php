@@ -122,26 +122,75 @@ function hapus_spasi_spam($cus){
 function hapus_tambahan_judul_gambar($cus)
  {
 	$cus = trim($cus);
-    $tulisan_tambahan = 'Gambar SEQ Gambar \* ARABIC ';
+    $tulisan_tambahan = 'SEQ Gambar \* ARABIC ';
 	while(strpos($cus,$tulisan_tambahan))
 	  {
         $cus = str_replace($tulisan_tambahan,' ',$cus);
 	  }
 	return $cus;
  }
+ 
+/* ------------------------------------------------------- 
+   hasil baca data seperti ini:
+Gambar 2." 2.1 Sistem Koreksi Kata (Saputra dkk., 2021). PAGEREF _Toc179257499 \h 5 TOC \h \z \c "Ga
+Gambar 3." 3.1 Waterfall Pressman. PAGEREF _Toc182249937 \h 103.2 Use Case Cek Judul Gambar. PAGE
+   seharusnya hasilnya seperti ini:
+     Gambar 2.1 Sistem Koreksi Kata.
+     Gambar 3.1 Waterfall Pressman.
+   jadi mulai dari SEQ sampai dengan ARABIC akan dibuang  
+   ------------------------------------------------------- */
+   function mengambil_judul_seq_arabic($salah_judul)
+   {
+    $panjang_salah_judul = strlen($salah_judul);
+    $posisi_seq          = strpos($salah_judul,'SEQ');
+    $panjang_ARABIC      = strlen('ARABIC');
+    $posisi_arabic      = strpos($salah_judul,'ARABIC')+$panjang_ARABIC;
+    $judul_baru = "";
+    for ($mulai=0;$mulai<=$panjang_salah_judul-1;$mulai++)
+      {
+          if (($mulai>$posisi_arabic) or ($mulai<$posisi_seq) )
+            { $judul_baru = $judul_baru.substr($salah_judul,$mulai,1); }
+      }
+    return $judul_baru;
+   }
+  
 
-//mengambil dokumen yang diupload pada database untuk di eksekusi
-$nama=mysqli_query($conn,"select nama from upload where id = 1");
-$nama1=mysqli_fetch_assoc($nama);
-$nama2= $nama1['nama'];
-$gass=$nama2;
-$isi=new docxConversion($gass);
-$isi=$isi->convertToText();
-$isi=hapus_tambahan_judul_gambar($isi);
+/* ------------------------------------------------------- 
+   hasil baca data seperti ini:
+Gambar 2." 2.1 Sistem Koreksi Kata (Saputra dkk., 2021). PAGEREF _Toc179257499 \h 5 TOC \h \z \c "Ga
+Gambar 3." 3.1 Waterfall Pressman. PAGEREF _Toc182249937 \h 103.2 Use Case Cek Judul Gambar. PAGE
+   seharusnya hasilnya seperti ini:
+     Gambar 2.1 Sistem Koreksi Kata.
+     Gambar 3.1 Waterfall Pressman.
+   jadi mulai dari SEQ sampai dengan ARABIC akan dibuang  
+   ------------------------------------------------------- */
+   function mengambil_judul_petikdua_pageref($salah_judul)
+   {
+    $panjang_salah_judul = strlen($salah_judul);
+    $posisi_petikdua     = strpos($salah_judul,'"')+1;
+    $posisi_pageref      = strpos($salah_judul,'PAGEREF')-1;
+    $panjang_ARABIC      = strlen('PAGEREF');
+    $judul_baru = "Gambar ";
+    for ($mulai=0;$mulai<=$panjang_salah_judul-1;$mulai++)
+      {
+          if ( ($mulai>$posisi_petikdua) and ($mulai<$posisi_pageref) )
+            { $judul_baru = $judul_baru.substr($salah_judul,$mulai,1); }
+      }
+    return $judul_baru;
+   }
+  
+  //mengambil dokumen yang diupload pada database untuk di eksekusi
+$nama  = mysqli_query($conn,"select nama from upload where id = 1");
+$nama1 = mysqli_fetch_assoc($nama);
+$nama2 = $nama1['nama'];
+$gass  = $nama2;
+$isi   = new docxConversion($gass);
+$isi   = $isi->convertToText();
+$isi   = hapus_tambahan_judul_gambar($isi);
 
 // kalau mau menampilkan isi hasil bacaan docx-nya
 // ini perintahnya
-//echo $isi."<br>";
+echo $isi."<br>";
 
 /* --------------------------------------------------------
    Gambar 4.
@@ -149,14 +198,18 @@ $isi=hapus_tambahan_judul_gambar($isi);
    -------------------------------------------------------- */
 
 $kata_yang_dicari    = "Gambar ";   
+
+/* --------------------------------------------------------
 $bukan_judul_gambar1 = "Gambar \*";   
 $bukan_judul_gambar2 = "Gambar SE";   
 $tulisan_tambahan    = "Gambar SEQ Gambar \* ARABIC "; // 5.
 $titik_satu          = 9;
 $titik_dua           = 10;
-$panjang_skripsi     = strlen($isi);
-$panjang_kata_yang_dicari = strlen($kata_yang_dicari);   
+   -------------------------------------------------------- */
 
+$panjang_skripsi          = strlen($isi);
+$panjang_kata_yang_dicari = strlen($kata_yang_dicari);   
+$asumsi_panjang_judul     = 100;
 
 
 // proses dari huruf pertama sampai dengan terakhir isi skripsi
@@ -166,11 +219,17 @@ for ($proses=0;$proses<=$panjang_skripsi;$proses++)
         //echo "$potongan_isi-$kata_yang_dicari-<br>";
    if ($potongan_isi==$kata_yang_dicari)
       {
-        $cek_judul_gambar = substr($isi,$proses,$panjang_kata_yang_dicari+2);
+        // di sini ketemu tulisan Gambar
+        // ambil tujuh karakter setelah huruf r pada kata Gambar
+        $cek_judul_gambar = substr($isi,$proses,$panjang_kata_yang_dicari+7);
+
+        //echo "$potongan_isi-$kata_yang_dicari-$cek_judul_gambar<br>";
+        //echo "$cek_judul_gambar<br>";
 
         // sebelah kanan kata gambar, harus angka
+        // misal Gambar 3 
         $posisi_angka = $proses+$panjang_kata_yang_dicari;
-        $apakah_angka = substr($isi,$posisi_angka,1);
+        $apakah_angka = substr($isi,$posisi_angka,2);
         $nilai = intval($apakah_angka);
 
         // jika sebelah kanan tulisan gambar setelah titik
@@ -181,51 +240,56 @@ for ($proses=0;$proses<=$panjang_skripsi;$proses++)
         // apakah sebelah angka, berisi titik atau angka lagi
         $apakah_titik = substr($isi,$posisi_angka+1,1);
 
-        if ($apakah_titik==".")
+        if ($apakah_titik!=".")
            {
-             $judul_gambarnya = substr($isi,$proses,$panjang_kata_yang_dicari+2);
-             $satu_digit = true;
+             //$judul_gambarnya = substr($isi,$proses,$panjang_kata_yang_dicari+2);
+             //$satu_digit = true;
+             continue;
            }
         else
            {
-            $satu_digit = false;
-            $judul_gambarnya = substr($isi,$proses,$panjang_kata_yang_dicari+3);
+            //$satu_digit = false;
+            $judul_gambarnya = substr($isi,$proses,$asumsi_panjang_judul);
+           }
 
-            // apakah sebelah angka, berisi titik atau angka lagi
-            $apakah_titik = substr($isi,$posisi_angka+2,1);
-            if ($apakah_titik!=".") {continue;}
+           // variabel untuk mencek masuk kategori pembuangan yang mana
+           $cek_pageref = false;
+           $cek_arabic = false;
 
-           }   
-        /*
-        echo "cek ...<br>";
-        echo "Cek Judul : ".$cek_judul_gambar."<br>";
-        echo "Cek Bukan Judul 1 : ".$bukan_judul_gambar1."<br>";
-        echo "Cek Bukan Judul 2 : ".$bukan_judul_gambar2."<br>";
-        if ( ($cek_judul_gambar==$bukan_judul_gambar1) || 
-             ($cek_judul_gambar==$bukan_judul_gambar2) 
-             )
-          {
-            continue;
-          }
-        else
+       // jika di dalam judul terdapat tulisan PAGEREF
+       // maka ini akan dibuang juga
+       $judul_gambarnya1 = "";
+       $ada = strpos($judul_gambarnya,'PAGEREF');
+       if ($ada!==false)
+       {
+        $judul_gambarnya1 = mengambil_judul_petikdua_pageref($judul_gambarnya);
+        $cek_pageref = true;
+      }
+       //echo $judul_gambarnya." --- ".$judul_gambarnya1."<br>";
+
+       // jika di dalam judul terdapat tulisan ARABIC
+       // maka ini akan dibuang juga
+       $judul_gambarnya2 = "";
+       $ada = strpos($judul_gambarnya,'ARABIC');
+       if ($ada!==false)
+       {
+        $judul_gambarnya2 = mengambil_judul_seq_arabic($judul_gambarnya);
+        $cek_arabic = true;
+      }
+      if ($cek_pageref!==false)
         {
-            $potongan_isi_tambahan = substr($isi,$proses,$panjang_kata_yang_dicari+7);
-            //echo "Judul lengkap: ".$potongan_isi_tambahan."<br>";
-            echo "Judul lengkap: ".$potongan_isi_tambahan."<br>";
+          //echo $judul_gambarnya1."<br>";
+          $judul_akhir = $judul_gambarnya1;
         }
-      */
-       if ($satu_digit)
-          {
-            $potongan_isi_tambahan = substr($isi,$proses+1,$panjang_kata_yang_dicari+250);
-            $judul_akhir        = $judul_gambarnya . substr($potongan_isi_tambahan,45,77);
+      if ($cek_arabic==true)
+        {
+          //echo $judul_gambarnya2."<br>";
+          $judul_akhir = $judul_gambarnya2;
         }
-       else
-          {
-            $potongan_isi_tambahan = substr($isi,$proses+2,$panjang_kata_yang_dicari+250);
-            $judul_akhir        = $judul_gambarnya . substr($potongan_isi_tambahan,46,77);
-        }
-
+        //echo "Judul Gambar: ".$judul_gambarnya1."-".$judul_gambarnya2."<br>";
+        /*           
         $judul_akhir = str_replace('..','.',$judul_akhir);
+        $judul_akhir = mengambil_judul_dua_angka($judul_akhir);
        //$tulisan_tambahan      = 'Gambar SEQ Gambar \* ARABIC';
    
        //echo "Judul proses  : ".$potongan_isi_tambahan."<br>";
@@ -247,6 +311,7 @@ for ($proses=0;$proses<=$panjang_skripsi;$proses++)
        // setelah didapatkan perkiraan judul gambar, selanjutnya
        // membersihkan judul ini, mengambil dari awal tulisan Gambar
        // sampai dengan ketemu titik dua kali
+*/
        
        $jumlah_titik_judul = 0;
        $panjang = strlen($judul_akhir);
@@ -268,7 +333,6 @@ for ($proses=0;$proses<=$panjang_skripsi;$proses++)
        echo $judul."<br>";
 
       }
-
 }
 // $kecil=strtolower($isi);
 
