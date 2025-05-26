@@ -212,10 +212,10 @@ maka hanya diambil untuk tulisan yang ada tahun dilima digit terakhir
         $tahun = substr($sitasi,$panjang_sitasi-5,4);
         
         $tahun_bilangan = (int)$tahun;
-        echo "$tahun - $tahun_bilangan <br>";
+        //echo "$tahun - $tahun_bilangan <br>";
         if ($tahun_bilangan>0)
            {
-             echo "$sitasi <br>";
+             echo "$sitasi <br>"; 
            }     
       }
 
