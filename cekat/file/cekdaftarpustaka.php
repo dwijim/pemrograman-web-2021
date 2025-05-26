@@ -150,7 +150,8 @@ $panjang_skripsi     = strlen($isi);
 // proses dari huruf pertama sampai dengan terakhir isi skripsi
 for ($proses=0;$proses<=$panjang_skripsi;$proses++)
 {
-   $potongan_isi = substr($isi,$proses,1);
+   $potongan_isi = substr($isi,$proses,1
+   $posisi_kurung_tutup = 0;
    if ($potongan_isi==$kurung_buka)
       {
         $posisi_kurung_buka = $proses;
@@ -173,12 +174,15 @@ for ($proses=0;$proses<=$panjang_skripsi;$proses++)
       ada di antara kurung buka dan kurung tutup
       
       ----------------------------------------- */
-   $sitasi = "";      
-   for ($ambil_isi=$posisi_kurung_buka;$ambil_isi<=$posisi_kurung_tutup;$ambil_isi++)
+   if ($posisi_kurung_tutup!=0)
    {
-       $sitasi = $sitasi.substr($ambil_isi,$proses,1);
+     $sitasi = "";      
+     for ($ambil_isi=$posisi_kurung_buka;$ambil_isi<=$posisi_kurung_tutup;$ambil_isi++)
+     {
+         $sitasi = $sitasi.substr($ambil_isi,$proses,1);
+     }
+     echo "$sitasi <br>";
    }
-   echo "$sitasi <br>";
 }
 
 ?>
