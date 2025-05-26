@@ -168,7 +168,55 @@ for ($proses=0;$proses<=$panjang_skripsi;$proses++)
             $sitasi = $sitasi.substr($isi,$ambil_isi,1);
             // dari kurung buka dan kurung tutup dikumpulkan menjadi sitasi
         }
-        echo "$sitasi <br>";
+        
+        /* hasilnya masih seperti ini ...
+(Skripsi)
+
+(Andaru, 2024)
+
+(Nugroho dan Pakereng, 2021)
+
+(Ayub et al., 2024)
+
+(SHA)
+
+(QR Code)
+
+(DSA)
+
+(UML)
+
+(BDT)
+
+(BDT)
+
+(FMIPA UNILA)
+
+(QR Code)
+
+(DSA)
+
+(SHA)
+
+(Gafrun & Supit, 2024)
+
+(Gafrun dan Supit, 2024)
+
+(Gafrun & Supit, 2024)
+
+maka hanya diambil untuk tulisan yang ada tahun dilima digit terakhir
+*/
+
+        $benar = true;
+        $panjang_sitasi = strlen($sitasi);
+        $tahun = substr($sitasi,$panjang_sitasi-5,4);
+        
+        $tahun_bilangan = (int)$tahun;
+        echo "$tahun - $tahun_bilangan <br>";
+        if ($tahun_bilangan>0)
+           {
+             echo "$sitasi <br>";
+           }     
       }
 
 }
