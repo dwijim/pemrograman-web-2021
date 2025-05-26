@@ -150,39 +150,27 @@ $panjang_skripsi     = strlen($isi);
 // proses dari huruf pertama sampai dengan terakhir isi skripsi
 for ($proses=0;$proses<=$panjang_skripsi;$proses++)
 {
-   $potongan_isi = substr($isi,$proses,1
+   $potongan_isi = substr($isi,$proses,1);
    $posisi_kurung_tutup = 0;
    if ($potongan_isi==$kurung_buka)
       {
         $posisi_kurung_buka = $proses;
-        // ambil tujuh huruf di sebelah kanannya
-        //$sebelah_kurung     = substr($isi,$proses,7);
-        //echo $sebelah_kurung;
+        // mencari posisi awal kurung buka
     }
 
       if ($potongan_isi==$kurung_tutup)
       {
         $posisi_kurung_tutup = $proses;
-        // ambil tujuh huruf di sebelah kirinya
-        //$sebelah_kurung     = substr($isi,$proses-6,7);
-        //echo " - ".$sebelah_kurung."<br>";
+        // mencari posisi kurung tutup
+        $sitasi = "";      
+        for ($ambil_isi=$posisi_kurung_buka;$ambil_isi<=$posisi_kurung_tutup;$ambil_isi++)
+        {
+            $sitasi = $sitasi.substr($isi,$ambil_isi,1);
+            // dari kurung buka dan kurung tutup dikumpulkan menjadi sitasi
+        }
+        echo "$sitasi <br>";
       }
 
-   /* -----------------------------------------
-      ini kan masing sepotong-sepotong
-      tahapan selanjutnya adalah memastikan apa yang
-      ada di antara kurung buka dan kurung tutup
-      
-      ----------------------------------------- */
-   if ($posisi_kurung_tutup!=0)
-   {
-     $sitasi = "";      
-     for ($ambil_isi=$posisi_kurung_buka;$ambil_isi<=$posisi_kurung_tutup;$ambil_isi++)
-     {
-         $sitasi = $sitasi.substr($ambil_isi,$proses,1);
-     }
-     echo "$sitasi <br>";
-   }
 }
 
 ?>
