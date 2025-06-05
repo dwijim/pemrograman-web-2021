@@ -159,6 +159,11 @@ $nama=mysqli_query($conn,"select nama from upload where id = 1");
 $nama1=mysqli_fetch_array($nama);
 $nama2= $nama1['nama'];
 $gass=$nama2;
+
+/* dwi sakethi 9 mei 2025 bikin bingung */
+//$gass = "dwisakethi.docx";
+
+
 $isi=new docxConversion($gass);
 $isi=$isi->convertToText();
 
@@ -363,7 +368,11 @@ $(document).ready(function() {
 	<td align="center" width=30><a href="baqo.php?data=download" type="submit" target=new>Hasil #1</a></td>
 	<td align="center" width=30><a href="unduh.php" type="submit" target=new>Hasil #2</a></td>
 	<td align="center" width=30><a href="baqo.php?data=lihat" type="submit" target=new>Persentase</a></td>
+</tr>
+<tr>
 	<td align="center" width=30><a href="karakter.php" type="submit" target=new>Cek Karakter</a></td>
+	<td align="center" width=30><a href="cekjudulgambar.php" type="submit" target=new>Cek Judul Gambar</a></td>
+	<td align="center" width=30><a href="cekdaftarpustaka.php" type="submit" target=new>Cek Daftar Pustaka</a></td>
 </tr>
 </table>
 </div>
