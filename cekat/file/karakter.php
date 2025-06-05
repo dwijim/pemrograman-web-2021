@@ -126,7 +126,7 @@ $isi=new docxConversion($gass);
 $isi=$isi->convertToText();
 //echo $isi;
 $kecil=strtolower($isi);
-// echo $kecil;
+//echo $kecil;
 
 	$update = "UPDATE karakter SET jumlah = 0";
   $kueri_update=mysqli_query($conn, $update);
@@ -143,18 +143,19 @@ $kecil=strtolower($isi);
 	  { 
 	    $cekcek = '( '; 
 	  }   
-	  elseif ( ($toc>0) &&  ($cekcek==' _') )
+	  else if ( ($toc>0) &&  ($cekcek==' _') )
 	  { 
+      //  echo "dwi sakethi<br>";
 	    continue;
 	  }   
 	  
-	  // echo $cekcek;
+	  //echo $cekcek;
 	  $jumlah= substr_count($kecil, $cekcek);
 	  // echo $jumlah;
 	  $update = "UPDATE karakter SET jumlah = $jumlah 
 	  	   WHERE karakter = '$cekcek'";
 	  $kueri_update=mysqli_query($conn, $update);
-        } 
+    } 
 
 /**echo "<table border=1>";
 echo "<tr>";
